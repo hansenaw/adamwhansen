@@ -3,12 +3,12 @@ console.log("Running script...");
 $(document).ready(function() {
 	$('div').mouseenter(function() {
 		$(this).animate({
-			height: '+=10px';
+			height: '+=10px'
 		});
 	});
 	$('div').mouseleave(function() {
 		$(this).animate({
-			height: '-=10px';
+			height: '-=10px'
 		});
 	});
 	$('div').click(function() {
