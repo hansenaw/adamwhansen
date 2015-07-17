@@ -1,0 +1,22 @@
+h1{
+	font-family:'Josefin Sans', sans-serif;
+}
+
+div{
+	height:100px;
+	width:100px;
+	display: inline-block;
+}
+
+#red {
+	background-color:red;
+}
+#blue {
+	background-color:blue;
+}
+#yellow {
+	background-color:yellow;
+}
+#green {
+	background-color:green;
+}
