@@ -2,7 +2,7 @@ h1{
 	font-family:'Josefin Sans', sans-serif;
 }
 
-div{
+bounce{
 	height:100px;
 	width:100px;
 	display: inline-block;
