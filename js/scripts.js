@@ -1,17 +1,17 @@
 console.log("Running script...");
 
 $(document).ready(function() {
-	$('div').mouseenter(function() {
+	$('.bounce').mouseenter(function() {
 		$(this).animate({
 			height: '+=10px'
 		});
 	});
-	$('div').mouseleave(function() {
+	$('.bounce').mouseleave(function() {
 		$(this).animate({
 			height: '-=10px'
 		});
 	});
-	$('div').click(function() {
+	$('.bounce').click(function() {
 		$(this).toggle(1000);
 	});
 });
