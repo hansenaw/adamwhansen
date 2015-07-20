@@ -12,7 +12,7 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-$('.navbar-brand a').click(function() {
+$('.navbar-brand ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
