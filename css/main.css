@@ -2,10 +2,8 @@ h1{
 	font-family:'Josefin Sans', sans-serif;
 }
 
-.bounce{
-	height:100px;
-	width:100px;
-	display: inline-block;
+img-circle{
+	max-height:200px;
 }
 
 #red {
