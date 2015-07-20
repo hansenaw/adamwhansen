@@ -6,6 +6,10 @@ h1{
 	max-height:250px;
 }
 
+.hide{
+	visibility:hidden;
+}
+
 #red {
 	background-color:red;
 }
