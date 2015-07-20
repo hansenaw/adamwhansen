@@ -40,7 +40,7 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section.container.row {
 	height: 100%;
-	background-color:red;
+	background-color:#F00;
 }
 
 .about-section {
@@ -52,7 +52,7 @@ of those sections to manage the look and feel of the site. */
 
 .about-section.container.row {
 	height: 100%;
-	background-color:red;
+	background-color:#F00;
 }
 
 .services-section {
@@ -64,7 +64,7 @@ of those sections to manage the look and feel of the site. */
 
 .services-section.container.row {
 	height: 100%;
-	background-color:red;
+	background-color:#F00;
 }
 
 .contact-section {
@@ -76,5 +76,5 @@ of those sections to manage the look and feel of the site. */
 
 .contact-section.container.row {
 	height: 100%;
-	background-color:red;
+	background-color:#F00;
 }
