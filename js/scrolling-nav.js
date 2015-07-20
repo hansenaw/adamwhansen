@@ -13,7 +13,7 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $('.navbar-brand ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
+	//$('.navbar-toggle:visible').click();
 });
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
