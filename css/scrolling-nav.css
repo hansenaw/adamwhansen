@@ -38,11 +38,21 @@ of those sections to manage the look and feel of the site. */
     background: #fff;
 }
 
+.intro-section.container {
+	height: 100%;
+	background-color:red;
+}
+
 .about-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
+}
+
+.about-section.container {
+	height: 100%;
+	background-color:red;
 }
 
 .services-section {
@@ -52,9 +62,19 @@ of those sections to manage the look and feel of the site. */
     background: #fff;
 }
 
+.services-section.container {
+	height: 100%;
+	background-color:red;
+}
+
 .contact-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
+}
+
+.contact-section.container {
+	height: 100%;
+	background-color:red;
 }
