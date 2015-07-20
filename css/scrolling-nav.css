@@ -38,7 +38,7 @@ of those sections to manage the look and feel of the site. */
     background: #fff;
 }
 
-.intro-section.row {
+.intro-section.container.row {
 	height: 100%;
 	background-color:red;
 }
@@ -50,7 +50,7 @@ of those sections to manage the look and feel of the site. */
     background: #eee;
 }
 
-.about-section.row {
+.about-section.container.row {
 	height: 100%;
 	background-color:red;
 }
@@ -62,7 +62,7 @@ of those sections to manage the look and feel of the site. */
     background: #fff;
 }
 
-.services-section.row {
+.services-section.container.row {
 	height: 100%;
 	background-color:red;
 }
@@ -74,7 +74,7 @@ of those sections to manage the look and feel of the site. */
     background: #eee;
 }
 
-.contact-section.row {
+.contact-section.container.row {
 	height: 100%;
 	background-color:red;
 }
