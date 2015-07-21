@@ -2,6 +2,10 @@ h1,p{
 	font-family:'Josefin Sans', sans-serif;
 }
 
+h1{
+	font-weight:bold;
+}
+
 .img-circle{
 	max-height:250px;
 }
