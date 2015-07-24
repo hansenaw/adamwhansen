@@ -1,3 +1,10 @@
+/*
+ * 
+ * <!--  <p class='hide'><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
+						-->
+ * 
+ * */
+
 body{
 	cursor: url('http://www.rw-designer.com/cursor-extern.php?id=30159'), default;
 	font-family:'Josefin Sans', sans-serif;
