@@ -59,6 +59,11 @@ of those sections to manage the look and feel of the site. */
     background: #eee;
 }
 
+.experience-section hr{
+	margin-top:20rem;
+	border-color:#7B7B7B;
+}
+
 .red{
 	//background-color:#f00;
 }
