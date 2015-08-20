@@ -1,5 +1,3 @@
-console.log("Running script...");
-
 $(document).ready(function() {
 	$('.bounce').mouseenter(function() {
 		$(this).animate({
