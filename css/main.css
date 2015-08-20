@@ -15,6 +15,29 @@ h1{
 	font-size:5rem;
 }
 
+h2{
+	font-size:3.5rem;
+}
+
+h3{
+	font-size:3rem;
+}
+
+#intro-paragraph{
+	padding-top:1rem;
+	font-size:2rem;
+	max-width:800px;
+	margin:0 auto;
+}
+
+#about-paragraph{
+	padding-top:1rem;
+	padding-bottom:5rem;
+	font-size:2rem;
+	max-width:800px;
+	margin:0 auto;
+}
+
 .img-circle{
 	max-height:250px;
 }
