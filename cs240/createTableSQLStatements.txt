@@ -1,0 +1,25 @@
+Tables:
+
+user
+DROP TABLE IF EXISTS main.user;
+CREATE  TABLE  main.user (userId INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , username TEXT NOT NULL , password TEXT NOT NULL , firstname TEXT NOT NULL , lastname TEXT NOT NULL , email TEXT, indexedRecords INTEGER NOT NULL  DEFAULT 0);
+
+project
+DROP TABLE IF EXISTS main.user;
+CREATE  TABLE  main.project (projectId INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , projectTitle TEXT NOT NULL , recordsPerImage INTEGER NOT NULL , firstycoord INTEGER NOT NULL , recordheight INTEGER NOT NULL );
+
+field
+DROP TABLE IF EXISTS main.field;
+CREATE  TABLE  main.field (fieldId INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , fieldTitle TEXT NOT NULL , xcoord INTEGER NOT NULL , width INTEGER NOT NULL , helpHtml TEXT, knownData TEXT, projectId INTEGER NOT NULL, fieldNumber INTEGER NOT NULL);
+
+imagebatch
+DROP TABLE IF EXISTS main.imagebatch;
+CREATE  TABLE  main.imagebatch (imageId INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , file TEXT NOT NULL , projectId INTEGER NOT NULL , indexed BOOL NOT NULL DEFAULT FALSE , userId INTEGER );
+
+record
+DROP TABLE IF EXISTS main.record;
+CREATE  TABLE  main.record (recordId INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , imageId INTEGER NOT NULL, recordNumber INTEGER );
+
+field
+DROP TABLE IF EXISTS main.value;
+CREATE  TABLE  main.value (valueId INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , recordId INTEGER NOT NULL, fieldTitle TEXT NOT NULL );
