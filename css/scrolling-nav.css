@@ -4,6 +4,8 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+ /*Color scheme from https://coolors.co/7a6f9b-c2202d-fdfff7-ffb800-0a2239*/
+
 body {
     width: 100%;
     height: 100%;
@@ -20,6 +22,7 @@ html {
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
+        background: #0A2239;
     }
 
     .top-nav-collapse {
@@ -33,7 +36,7 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
     /*min-height: 100%;*/
-    padding-top: 150px;
+    padding-top: 50px;
     text-align: center;
     background: #fff;
 }
@@ -54,10 +57,16 @@ of those sections to manage the look and feel of the site. */
 }
 
 .experience-section {
-    min-height: 100%;
-    padding-top: 150px;
+    /*min-height: 100%;*/
+    height:200px;
+    padding-top: 50px;
     text-align: center;
-    background: #eee;
+    background: #0A2239;
+    color:#FDFFF7;
+}
+
+.experience-section a{
+    color:#7A6F9B;
 }
 
 .experience-section hr{

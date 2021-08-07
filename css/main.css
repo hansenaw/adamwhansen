@@ -5,9 +5,14 @@
  * 
  * */
 
+
+/*Color scheme from https://coolors.co/7a6f9b-c2202d-fdfff7-ffb800-0a2239*/
+
 body{
-	cursor: url('http://www.rw-designer.com/cursor-extern.php?id=30159'), default;
-	font-family:'Josefin Sans', sans-serif;
+	/*cursor: url('http://www.rw-designer.com/cursor-extern.php?id=30159'), default;*/
+	/*font-family:'Josefin Sans', sans-serif;
+	font-family:'Gowun Batang', serif;*/
+	font-family: 'Merriweather', serif;
 }
 
 h1{
@@ -24,12 +29,18 @@ h3{
 }
 
 .boxshadow{
-	box-shadow: 5px 5px 5px 3px black;
+	/*box-shadow: 5px 5px 5px 3px black;*/
 }
 
 #intro{
-	background-color: rgba(250,250,235,.8);
-	text-shadow: -2px -2px 4px rgba(180,180,180,.7);
+	background-color: #FDFFF7;
+	color:#0A2239;
+	font-family: 'Merriweather Sans', sans-serif;
+	/*text-shadow: -2px -2px 4px rgba(180,180,180,.7);*/
+}
+
+#intro a{
+	color:#7A6F9B;
 }
 
 #intro-paragraph{
@@ -37,6 +48,8 @@ h3{
 	font-size:2rem;
 	max-width:800px;
 	margin:0 auto;
+	color:#0A2239;
+	font-family: 'Merriweather', serif;
 }
 
 .intro-paragraph-section{
@@ -113,11 +126,11 @@ h3{
 #blue {
 	background-color:blue;
 }
-#yellow {
-	background-color:yellow;
-}
+
 #green {
 	background-color:green;
 }
 
-
+.selective-yellow{
+	color:#FFB800;
+}
