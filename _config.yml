@@ -1,0 +1,48 @@
+# Site-wide settings.
+# Day-to-day content lives in _data/ (lists) and _copy/ (prose). See README.md.
+
+title: Adam W. Hansen
+# Used for the homepage <title> and as the default search/social description.
+home_title: Adam W. Hansen — Computational geneticist and CEO of Geneial
+description: >-
+  Adam W. Hansen, PhD, is a computational geneticist and the founder and CEO of
+  Geneial. He trained in rare-disease genomics at Baylor College of Medicine.
+
+url: https://adamwhansen.com
+baseurl: ""
+lang: en-US
+timezone: America/Chicago
+
+# GitHub Pages applies its default "Primer" theme unless this is null. This site has its own layout.
+theme: null
+
+# 1200×630 image shown when the site is shared on LinkedIn, Slack, etc.
+og_image: /assets/img/og-card.png
+og_image_alt: Adam W. Hansen, PhD — computational geneticist, founder and CEO of Geneial
+
+collections:
+  copy:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - tools
+  # Legacy files from the 2015–2022 site: kept in the repo, no longer published.
+  - createStatements.txt
+  - css
+  - js
+  - fonts
+  - images

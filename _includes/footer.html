@@ -1,0 +1,11 @@
+{%- assign profile = site.data.profile -%}
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="footer-links">
+      {%- for link in profile.links %}
+      <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      {%- endfor %}
+    </ul>
+    <p>© {{ site.time | date: "%Y" }} {{ profile.name }} · Updated {{ site.time | date: "%B %Y" }}</p>
+  </div>
+</footer>

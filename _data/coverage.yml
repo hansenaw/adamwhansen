@@ -1,0 +1,38 @@
+# Press and third-party coverage, newest first. Favor depth and independence over volume.
+#   date: YYYY-MM-DD (shown as month and year)
+
+- outlet: Baylor College of Medicine
+  date: 2026-08-26
+  title: Celebrating 11 outstanding Alumni Awards honorees
+  url: https://give.bcm.edu/2026alumniawards/
+  note: Announcement of the 2026 Alumni Awards, including my Young Alumnus Award.
+
+- outlet: GenomeWeb
+  date: 2023-11-01
+  title: Geneial Lands $349K SBIR Grant from National Library of Medicine for PGx Data Exchange
+  url: https://www.genomeweb.com/research-funding/geneial-lands-349k-sbir-grant-national-library-medicine-pgx-data-exchange
+  note: The NLM-funded work on patient-controlled pharmacogenomic data.
+
+- outlet: Xia-Gibbs Society
+  date: 2023-05-11
+  title: XGS Research Grant Update
+  url: https://xia-gibbs.org/research-grant-2023/
+  note: The patient organization on its registry collaboration with Geneial.
+
+- outlet: GenomeWeb
+  date: 2022-09-28
+  title: Geneial Proposes Marketplace Approach to Rare Disease Data Sharing
+  url: https://www.genomeweb.com/informatics/geneial-proposes-marketplace-approach-rare-disease-data-sharing
+  note: A feature on Geneial’s early approach to rare-disease data sharing, with outside experts. Subscriber article.
+
+- outlet: GenomeWeb
+  date: 2022-09-22
+  title: Geneial Nabs $2.3M NIH Grant for Rare Disease Data Platform
+  url: https://www.genomeweb.com/informatics/geneial-nabs-23m-nih-grant-rare-disease-data-platform
+  note: The NHGRI-funded registry platform and the Xia-Gibbs syndrome pilot that came before it.
+
+- outlet: Baylor College of Medicine
+  date: 2019-10-24
+  title: Connecting gene mutations, rare genetic diseases
+  url: https://www.bcm.edu/news/connecting-gene-mutations-genetic-diseases
+  note: Baylor’s story on my AJHG paper and the 154 candidate disease genes.

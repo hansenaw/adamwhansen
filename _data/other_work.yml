@@ -1,0 +1,25 @@
+# Patents, reports, and code, newest first. Shown on /research/.
+
+- title: Secure data exchange
+  kind: US Patent 12,417,301 B2
+  year: 2025
+  role: Co-inventor; assigned to Geneial
+  url: https://patents.google.com/patent/US12417301B2/en
+
+- title: GenOMA, the Geneial Ontology Mapping Agent
+  kind: Open-source code
+  year: 2025
+  role: Code for the ML4H 2025 paper
+  url: https://github.com/geneialco/GenOMA-Geneial-Ontology-Mapping-Agent
+
+- title: "Critical bottlenecks in rare disease research and care: a community perspective"
+  kind: White paper (Zenodo)
+  year: 2025
+  role: Co-author
+  url: https://zenodo.org/records/14907384
+
+- title: HARLEE analysis
+  kind: Open-source code
+  year: 2019
+  role: Code for the AJHG 2019 genocentric analysis
+  url: https://github.com/BCM-HGSC/HARLEE_analysis

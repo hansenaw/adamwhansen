@@ -1,0 +1,70 @@
+# Peer-reviewed papers, newest first.
+#   authors:  Markdown — wrap your own name in ** ** to bold it.
+#   selected: true shows it on the homepage (keep it to about six).
+#   note:     your role or why it matters, in a few words.
+
+- title: An agentic approach to phenotype mapping from rare disease surveys
+  authors: "Di J\\*, Vaughn JR\\*, Proulx J, Nordstrand S, Daines B, Ward KM, Lupo PJ, Hu J, Murugan M, **Hansen AW**"
+  venue: Proceedings of the 5th Machine Learning for Health Symposium (ML4H 2025), PMLR 297
+  year: 2026
+  url: https://proceedings.mlr.press/v297/di26a.html
+  note: "Senior author; \\*co-first authors. I led the R&D program behind it. Best Paper Award, ML4H 2025."
+  selected: true
+
+- title: "Health equity innovation in precision medicine: data stewardship and agency to expand representation in clinicogenomics"
+  authors: "Silva PJ, Rahimzadeh V, Powell R, Husain J, Grossman S, **Hansen A**, Hinkel J, Rosengarten R, Ory MG, Ramos KS"
+  venue: Health Research Policy and Systems
+  year: 2024
+  url: https://doi.org/10.1186/s12961-024-01258-9
+  note: A case for patient-centered, privacy-preserving data stewardship.
+  selected: true
+
+- title: AHDC1 missense mutations in Xia-Gibbs syndrome
+  authors: "Khayat MM, Hu J, Jiang Y, Li H, … **Hansen AW**, … Posey JE, Murdock D, Gibbs RA"
+  venue: Human Genetics and Genomics Advances
+  year: 2021
+  url: https://doi.org/10.1016/j.xhgg.2021.100049
+  note: Five of the ten individuals came through the Xia-Gibbs syndrome registry.
+  selected: true
+
+- title: "Germline mutation in POLR2A: a heterogeneous, multi-systemic developmental disorder characterized by transcriptional dysregulation"
+  authors: "**Hansen AW**, Arora P, Khayat MM, Smith LJ, … Lupski JR, Kaplan CD, Gibbs RA"
+  venue: Human Genetics and Genomics Advances
+  year: 2021
+  url: https://doi.org/10.1016/j.xhgg.2020.100014
+  note: First and co-corresponding author.
+  selected: true
+
+- title: "Phenotypic and protein localization heterogeneity associated with AHDC1 pathogenic protein-truncating alleles in Xia-Gibbs syndrome"
+  authors: "Khayat MM, Li H, Chander V, Hu J, … **Hansen AW**, … Murdock DR, Wangler M, Gibbs RA"
+  venue: Human Mutation
+  year: 2021
+  url: https://doi.org/10.1002/humu.24190
+
+- title: RCL1 copy number variants are associated with a range of neuropsychiatric phenotypes
+  authors: "Brownstein CA, Smith RS, Rodan LH, Gorman MP, … **Hansen AW**, … Scherer SW, Glahn DC, Gonzalez-Heydrich J"
+  venue: Molecular Psychiatry
+  year: 2021
+  url: https://doi.org/10.1038/s41380-021-01035-y
+
+- title: "Phenotypic expansion in KIF1A-related dominant disorders: a description of novel variants and review of published cases"
+  authors: "Montenegro-Garreaud X\\*, **Hansen AW\\***, Khayat MM, Chander V, … Liu P, Lupski JR, Gibbs RA"
+  venue: Human Mutation
+  year: 2020
+  url: https://doi.org/10.1002/humu.24118
+  note: "\\*Co-first author; co-corresponding."
+  selected: true
+
+- title: A genocentric approach to discovery of Mendelian disorders
+  authors: "**Hansen AW**, Murugan M, Li H, Khayat MM, … Lupski JR, Boerwinkle E, Gibbs RA"
+  venue: American Journal of Human Genetics
+  year: 2019
+  url: https://doi.org/10.1016/j.ajhg.2019.09.027
+  note: "First author. 154 candidate disease genes from exome data on 18,696 people."
+  selected: true
+
+- title: "Phenotypic expansion in DDX3X: a common cause of intellectual disability in females"
+  authors: "Wang X, Posey JE, Rosenfeld JA, Bacino CA, … **Hansen AW**, … Yang Y, Graham BH, Moretti P"
+  venue: Annals of Clinical and Translational Neurology
+  year: 2018
+  url: https://doi.org/10.1002/acn3.622

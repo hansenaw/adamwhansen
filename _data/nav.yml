@@ -1,0 +1,7 @@
+# Top navigation, in order.
+- label: Work
+  url: /#work
+- label: Research
+  url: /research/
+- label: Contact
+  url: /#contact

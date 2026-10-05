@@ -1,0 +1,82 @@
+# Selected conference abstracts (first- or senior-author), newest first. Shown on /research/.
+#   role:   your position, in plain words
+#   url:    the meeting's abstract book or abstract page
+#   award:  optional
+
+- title: An agentic AI tool for automated data transformation from TOPMed to LinkML and Phenopackets
+  meeting: ASHG 2025
+  id: Poster 2019F
+  role: Senior author
+  year: 2025
+  url: https://www.ashg.org/wp-content/uploads/2025/10/2025-Poster-Abstracts.pdf
+
+- title: An AI-co-scientist framework for reproducible discovery in rare disease registries
+  meeting: ASHG 2025
+  id: Poster 2031F
+  role: Senior author
+  year: 2025
+  url: https://www.ashg.org/wp-content/uploads/2025/10/2025-Poster-Abstracts.pdf
+
+- title: Automating HPO term extraction from clinical text using an LLM pipeline with UMLS Model Context Protocol (MCP) integration
+  meeting: ASHG 2025
+  id: Poster 2032F
+  role: Senior author
+  year: 2025
+  url: https://www.ashg.org/wp-content/uploads/2025/10/2025-Poster-Abstracts.pdf
+
+- title: Enabling privacy-preserving clinical decision support for pharmacogenomics from whole genome sequencing
+  meeting: ASHG 2025
+  id: Poster 5088T
+  role: Senior author
+  year: 2025
+  url: https://www.ashg.org/wp-content/uploads/2025/10/2025-Poster-Abstracts.pdf
+
+- title: Low-cost, interoperable rare disease registries via an enhanced GenomeConnect survey
+  meeting: ASHG 2025
+  id: Poster 7018F
+  role: Senior author
+  year: 2025
+  url: https://www.ashg.org/wp-content/uploads/2025/10/2025-Poster-Abstracts.pdf
+
+- title: Using whole genome sequencing to call star alleles expands coverage and sensitivity for clinical pharmacogenomics decision-making
+  meeting: ASHG 2024
+  id: Poster 7023F
+  role: Senior author
+  year: 2024
+  url: https://www.ashg.org/wp-content/uploads/2024/10/ASHG2024-PosterAbstracts.pdf
+
+- title: Characterization of hearing loss and skin cancer in individuals with Rothmund-Thomson syndrome
+  meeting: ASHG 2024
+  id: Poster 2019F
+  role: First author
+  year: 2024
+  url: https://www.ashg.org/wp-content/uploads/2024/10/ASHG2024-PosterAbstracts.pdf
+
+- title: "Advancing insights in Xia-Gibbs syndrome: a universal registry platform for phenotypic analysis and longitudinal patient engagement"
+  meeting: ASHG 2023
+  id: Poster PB4624
+  role: First author
+  year: 2023
+  award: Reviewers’ Choice
+  url: https://www.ashg.org/wp-content/uploads/2023/10/ASHG2023-PosterAbstracts.pdf
+
+- title: "A private, universal registry for patient engagement in biomedical research: Xia-Gibbs syndrome as a model"
+  meeting: ASHG 2022
+  id: Poster PB3193
+  role: First author
+  year: 2022
+  url: https://www.ashg.org/wp-content/uploads/2022/09/ASHG2022-PosterAbstracts.pdf
+
+- title: A genocentric, optimization-based approach to discovery of Mendelian disease genes
+  meeting: ASHG 2019
+  id: Program no. 1393
+  role: First author
+  year: 2019
+  url: https://www.ashg.org/wp-content/uploads/2019/10/ASHG-2019-poster-abstracts.pdf
+
+- title: A Hadoop data lake enables genocentric mining of genetic variation associated with Mendelian disease
+  meeting: ASHG 2018
+  id: Poster 1676F
+  role: First author
+  year: 2018
+  url: https://www.ashg.org/wp-content/uploads/2019/10/2018-poster-abstracts.pdf

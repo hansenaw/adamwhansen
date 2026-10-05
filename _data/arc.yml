@@ -1,0 +1,75 @@
+# The four steps under "From gene discovery to Geneial", oldest first.
+# Each step: when, title, text, and sources (small citation links).
+
+- when: 2016–2020 · Baylor College of Medicine
+  title: Finding the genes behind rare diseases
+  text: >-
+    PhD research in Richard Gibbs’ group at the Human Genome Sequencing Center. I pooled exome data
+    from 18,696 people referred for suspected Mendelian disease and built a gene-first analysis that
+    flagged 154 candidate disease genes. Follow-up papers characterized disorders tied to POLR2A and KIF1A,
+    and I contributed to studies of Xia-Gibbs syndrome.
+  sources:
+    - label: AJHG 2019
+      url: https://doi.org/10.1016/j.ajhg.2019.09.027
+      title: "A Genocentric Approach to Discovery of Mendelian Disorders (first author)"
+    - label: BCM News
+      url: https://www.bcm.edu/news/connecting-gene-mutations-genetic-diseases
+      title: "Connecting gene mutations, rare genetic diseases (Baylor College of Medicine, 2019)"
+    - label: HGG Adv 2021
+      url: https://doi.org/10.1016/j.xhgg.2020.100014
+      title: "Germline mutation in POLR2A (first author)"
+
+- when: Since 2020 · Geneial
+  title: Infrastructure that keeps data private
+  text: >-
+    Rare-disease data is sparse, scattered, and easy to re-identify, so privacy has to be built in
+    rather than added later. I’m a co-inventor on Geneial’s patent for secure data exchange, which
+    analyzes homomorphically encrypted data without decrypting it, and principal investigator on
+    NIH-funded projects in privacy-preserving connectivity for rare-disease patients (NHGRI) and
+    patient-controlled pharmacogenomic reporting (NLM).
+  sources:
+    - label: US Patent 12,417,301
+      url: https://patents.google.com/patent/US12417301B2/en
+      title: "Secure data exchange (issued September 2025)"
+    - label: NHGRI
+      url: https://reporter.nih.gov/project-details/10886143
+      title: "NIH RePORTER: Privacy-Preserving Connectivity for Rare-Disease Patients"
+    - label: NLM
+      url: https://reporter.nih.gov/project-details/10760119
+      title: "NIH RePORTER: Private Pharmacogenomic Reporting"
+
+- when: Since 2022 · Geneial
+  title: Research people can stay part of
+  text: >-
+    Registries and natural-history studies built for long-term participation, starting with the
+    Xia-Gibbs syndrome community: electronic consent, patient-reported surveys, and follow-up over
+    time, with data that researchers can actually analyze. Our ASHG 2023 abstract on that registry
+    platform was a Reviewers’ Choice selection.
+  sources:
+    - label: ASHG 2023
+      url: https://www.ashg.org/wp-content/uploads/2023/10/ASHG2023-PosterAbstracts.pdf
+      title: "Advancing insights in Xia-Gibbs syndrome (poster PB4624, Reviewers’ Choice)"
+    - label: Xia-Gibbs Society
+      url: https://xia-gibbs.org/research-grant-2023/
+      title: The patient organization on its registry collaboration with Geneial
+    - label: Talk
+      url: https://www.youtube.com/watch?v=n9Isrh_ZXuM
+      title: "“Updates to the XGS Registry,” Xia-Gibbs Syndrome Family Conference 2026"
+
+- when: Since 2024 · Geneial
+  title: AI for rare-disease research
+  text: >-
+    As part of an ARPA-H-funded data-standardization effort led by RENCI with NHLBI BioData
+    Catalyst, my team builds AI agents that turn messy research data into standard, analyzable
+    formats. One of them, GenOMA, maps rare-disease survey questions to Human Phenotype Ontology
+    terms; the paper received a Best Paper Award at ML4H 2025.
+  sources:
+    - label: PMLR
+      url: https://proceedings.mlr.press/v297/di26a.html
+      title: "An Agentic Approach to Phenotype Mapping from Rare Disease Surveys (ML4H 2025)"
+    - label: RENCI
+      url: https://renci.org/project/biodata-catalyst-biomedical-data-fabric/
+      title: "BioData Catalyst / Biomedical Data Fabric project (lists Geneial as a partner)"
+    - label: Code
+      url: https://github.com/geneialco/GenOMA-Geneial-Ontology-Mapping-Agent
+      title: "GenOMA source code on GitHub"

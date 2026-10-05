@@ -1,0 +1,6 @@
+{%- assign item = include.item -%}
+<li>
+  <span class="title">{{ item.title }}</span>
+  <span class="meta">{% if item.year %}{{ item.year }} · {% endif %}{{ item.detail }}</span>
+  {% include cites.html sources=item.sources %}
+</li>

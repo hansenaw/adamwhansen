@@ -1,0 +1,25 @@
+# Short facts under the intro. Add `sources` only where a link adds something;
+# one source per institution is enough.
+
+- text: PhD, Molecular and Human Genetics, Baylor College of Medicine (2020)
+
+- text: Principal investigator on NIH-funded research in rare disease and pharmacogenomics
+  sources:
+    - label: NHGRI
+      url: https://reporter.nih.gov/project-details/10886143
+      title: "NIH RePORTER: Privacy-Preserving Connectivity for Rare-Disease Patients"
+    - label: NLM
+      url: https://reporter.nih.gov/project-details/10760119
+      title: "NIH RePORTER: Private Pharmacogenomic Reporting"
+
+- text: Best Paper Award at ML4H 2025, for work from a Geneial team I led
+  sources:
+    - label: PMLR
+      url: https://proceedings.mlr.press/v297/di26a.html
+      title: An Agentic Approach to Phenotype Mapping from Rare Disease Surveys
+
+- text: 2026 Young Alumnus Award, Baylor College of Medicine Graduate School of Biomedical Sciences
+  sources:
+    - label: BCM
+      url: https://give.bcm.edu/2026alumniawards-hansen/
+      title: Baylor College of Medicine 2026 Alumni Awards profile

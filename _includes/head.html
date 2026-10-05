@@ -1,0 +1,46 @@
+{%- assign profile = site.data.profile -%}
+{%- if page.title -%}
+  {%- assign page_title = page.title | append: " — " | append: profile.name -%}
+{%- else -%}
+  {%- assign page_title = site.home_title -%}
+{%- endif -%}
+{%- assign page_description = page.description | default: site.description | strip_newlines | strip -%}
+{%- assign is_home = false -%}
+{%- if page.url == "/" -%}{%- assign is_home = true -%}{%- endif -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_description | escape }}">
+<meta name="author" content="{{ profile.name }}">
+{%- if page.noindex %}
+<meta name="robots" content="noindex">
+{%- else %}
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+{%- endif %}
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)">
+
+<meta property="og:site_name" content="{{ profile.name }}">
+<meta property="og:type" content="{% if is_home %}profile{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ site.og_image | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.og_image_alt | escape }}">
+<meta property="og:locale" content="en_US">
+{%- if is_home %}
+<meta property="profile:first_name" content="{{ profile.first_name }}">
+<meta property="profile:last_name" content="{{ profile.last_name }}">
+{%- endif %}
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+{%- if is_home %}
+{% include schema.html %}
+{%- endif %}

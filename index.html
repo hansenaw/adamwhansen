@@ -1,152 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+# Homepage layout. To change the words, edit _copy/*.md; to change lists, edit _data/*.yml.
+---
+{%- assign profile = site.data.profile -%}
 
-<head>
+<header class="hero">
+  <h1>{{ profile.name }}<span class="post">, {{ profile.honorific }}</span></h1>
+  <p class="role">{{ profile.role_line }}</p>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	<meta content="Adam W. Hansen - Founder, Geneticist, Data Scientist">
-	
-	<title>Adam W. Hansen</title>
-	
+  <picture class="hero-photo">
+    <source media="(min-width: 46rem)" srcset="{{ profile.photo.src | relative_url }}" width="480" height="600">
+    <img src="{{ profile.photo.tight | relative_url }}" width="240" height="300" alt="{{ profile.photo.alt }}" fetchpriority="high">
+  </picture>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <div class="lede">
+    {% include copy.html name="intro" %}
+  </div>
 
-    <!-- Custom CSS -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="css/main.css"/>
-	
-	<!-- Extra Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <ul class="actions">
+    {%- for link in profile.hero_links %}
+    <li><a href="{{ link.url | relative_url }}">{{ link.label }}</a></li>
+    {%- endfor %}
+  </ul>
 
+  <h2 class="visually-hidden">Background, with sources</h2>
+  <ul class="record">
+    {%- for item in site.data.record %}
+    <li>
+      <span>{{ item.text }}</span>
+      {% include cites.html sources=item.sources %}
+    </li>
+    {%- endfor %}
+  </ul>
+</header>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<section class="section" id="now" aria-labelledby="now-title">
+  <h2 id="now-title">What I’m working on</h2>
+  <div class="prose">
+    {% include copy.html name="now" %}
+  </div>
+</section>
 
-</head>
+<section class="section" id="work" aria-labelledby="work-title">
+  <h2 id="work-title">From gene discovery to Geneial</h2>
+  <div class="prose">
+    {% include copy.html name="through-line" %}
+  </div>
+  <ol class="arc">
+    {%- for step in site.data.arc %}
+    <li>
+      <p class="meta">{{ step.when }}</p>
+      <h3>{{ step.title }}</h3>
+      <p>{{ step.text }}</p>
+      {% include cites.html sources=step.sources %}
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
 
-<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+<section class="section" id="publications" aria-labelledby="publications-title">
+  <h2 id="publications-title">Selected publications</h2>
+  <ol class="refs">
+    {%- for pub in site.data.publications %}
+    {%- if pub.selected %}
+    {% include pub.html pub=pub %}
+    {%- endif %}
+    {%- endfor %}
+  </ol>
+  <p class="more">
+    <a href="{{ '/research/' | relative_url }}">All papers, abstracts, and grants</a>
+    {%- for link in profile.links %}{% if link.bibliography %} · <a href="{{ link.url }}">{{ link.label }}</a>{% endif %}{% endfor %}
+  </p>
+</section>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<section class="section" id="recognition" aria-labelledby="recognition-title">
+  <h2 id="recognition-title">Recognition and service</h2>
+  <ul class="refs">
+    {%- for item in site.data.recognition %}
+    {% include recognition-item.html item=item %}
+    {%- endfor %}
+  </ul>
+</section>
 
-    <!-- Intro Section -->
-    <section id="intro" class="intro-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Adam W. Hansen, PhD</h1>
-					<hr/>
-					<h2>2x Founder | Geneticist | Data scientist</h2>
-					<h3 class="selective-yellow">Musician | Linguist</h3>
-					<img class="img-circle" src="images/laguna_square.jpg"></img>
-                    <h3>CEO of <a target="_blank" href="https://www.geneial.com">Geneial</a></h3>
-					<h3><a target="_blank" href="http://www.twitter.com/hanseninnovate">@hanseninnovate</a></h3>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<!-- Intro Paragraph -->
-	<section class="intro-paragraph-section">
-        <div class="container">
-            <div class="row red opaque boxshadow">
-                <div class="col-lg-12">			
-					
-					<div id="intro-paragraph" class="applewrap">
-						
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<img src="images/train_station.jpeg"></img>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<p>
-									<strong>I believe that people are more important than problems. </strong>I believe that while we are are innately flawed and imperfect, we have an instinctual desire to improve our condition. Progress comes through collaboration and reliance on external forces: people, technology, deity, and other resources.
-								</p>
-							</div>
-						</div>
-						<hr/>
-						
-						<div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<p>
-									<strong>I am unique in how I value technology as a tool to solve human problems. </strong>I am sensitive to pains, problems, and opportunities, and I love the process of innovation—the iterative journey of addressing these issues. I believe that interdisciplinary education and collaboration foster innovation.
-								</p>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<img src="images/people-office-group-team.jpeg"></img>
-							</div>
-						</div>
-						<hr/>
-						
-						<div class="row"></div>
-							<div class="col-xs-12 col-sm-6">
-								<img src="images/sky-earth-galaxy-universe.jpeg"></img>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<p>
-									<strong>My education is unique and interdisciplinary. </strong>I have a PhD in Genetics & Genomics from Baylor College of Medicine, and a B.S. in bioinformatics from Brigham Young University with minors in computer science, global business & literacy, and Chinese. I have a highly technical skill set, yet I also possess a strong humanities background enabling me to appreciate "the big picture" of how my efforts relate to the human experience.
-								</p>
-							</div>
-							
-						</div>
-						
-					</div>
-					<hr/>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section" id="coverage" aria-labelledby="coverage-title">
+  <h2 id="coverage-title">Coverage</h2>
+  <ul class="refs">
+    {%- for item in site.data.coverage %}
+    <li>
+      <a class="title" href="{{ item.url }}">{{ item.title }}</a>
+      <span class="meta">{{ item.outlet }} · {{ item.date | date: "%B %Y" }}</span>
+      {%- if item.note %}
+      <span class="note">{{ item.note }}</span>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
 
+<section class="section" id="speaking" aria-labelledby="speaking-title">
+  <h2 id="speaking-title">Speaking</h2>
+  <div class="prose">
+    {% include copy.html name="speaking" %}
+  </div>
+  {%- assign talk_photos = site.data.talks | where_exp: "talk", "talk.photo" %}
+  {%- if talk_photos.size > 0 %}
+  <div class="photos">
+    {%- for talk in talk_photos %}
+    <figure>
+      <a href="{{ talk.photo.src | relative_url }}"><img src="{{ talk.photo.small | relative_url }}" width="800" height="533" alt="{{ talk.photo.alt | escape }}" loading="lazy" decoding="async"></a>
+      <figcaption class="meta">{{ talk.photo.caption }}</figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+  <h3 class="subhead">Selected talks and panels</h3>
+  <ul class="refs">
+    {%- for talk in site.data.talks %}
+    {%- if talk.selected %}
+    {% include talk.html talk=talk %}
+    {%- endif %}
+    {%- endfor %}
+  </ul>
+  <p class="more"><a href="{{ '/research/#talks' | relative_url }}">All talks and panels</a></p>
+</section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-                <div class="col-lg-auto">
-                    <h4>&#169; 2021</h4>
-                    <h3><a target="_blank" href="https://www.linkedin.com/in/awhansen">Adam W. Hansen</a></h3>                    
-                </div>
-        </div>
-    </section>
+<section class="section" id="outside" aria-labelledby="outside-title">
+  <h2 id="outside-title">Outside work</h2>
+  <div class="prose">
+    {% include copy.html name="outside" %}
+  </div>
+</section>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
-	
-	<!-- Custom JavaScript -->
-	<script type="text/javascript" src="js/scripts.js"></script>
-	
-	<!-- Google Analytics - "Adam W Hansen" -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-66575430-1', 'auto');
-	  ga('require','#skills');
-	  ga('require','#about');
-	  ga('require','#experience');
-	  ga('send', 'pageview');
-
-	</script>
-
-</body>
-
-</html>
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">Contact</h2>
+  <div class="prose">
+    {% include copy.html name="contact" %}
+  </div>
+</section>

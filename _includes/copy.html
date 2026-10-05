@@ -1,0 +1,6 @@
+{%- comment -%}
+  Outputs a prose block from _copy/<name>.md.
+  Usage: {% include copy.html name="intro" %}
+{%- endcomment -%}
+{%- assign block = site.copy | where: "slug", include.name | first -%}
+{{ block.content }}

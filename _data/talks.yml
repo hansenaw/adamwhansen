@@ -1,0 +1,74 @@
+# Talks and panels, newest first. All appear on /research/; `selected: true` also shows one on the homepage.
+#   title:      use quotes only for an official talk title; otherwise describe the talk.
+#   year, url, link_label: optional. link_label says what the link opens (Video, Event page, …).
+#   photo:      optional. Shown above the homepage talk list; keep it to one or two photos in total.
+#               small = 800px-wide JPEG, src = 1400px-wide JPEG (both in assets/img/talks/).
+
+- year: 2026
+  title: "“Updates to the XGS Registry”"
+  event: Xia-Gibbs Syndrome Family Conference
+  url: https://www.youtube.com/watch?v=n9Isrh_ZXuM
+  link_label: Video
+  selected: true
+
+- year: 2025
+  title: "“Precision Medicine in MedTech: Shaping the Future of Personalised Care”"
+  event: MedTech World Malta, Valletta, panelist
+  url: https://med-tech.world/malta/
+  link_label: Event site
+  selected: true
+  photo:
+    small: /assets/img/talks/medtech-malta-2025-800.jpg
+    src: /assets/img/talks/medtech-malta-2025-1400.jpg
+    alt: Adam Hansen speaking on a four-person precision medicine panel at MedTech Malta 2025, in front of a screen showing the panel title and panelists
+    caption: Precision medicine panel, MedTech Malta 2025
+
+- year: 2025
+  title: "“How Can We Improve Data Infrastructure?”"
+  event: >-
+    Pediatric Mental Health Summit: Reimagining Inpatient Care within the Full Continuum of Care,
+    Texas A&M Health, Austin, panel moderator
+  url: https://ccha.tamu.edu/_files/_documents/documents/smhsca-final-report.pdf
+  link_label: Summit report (PDF)
+  selected: true
+  photo:
+    small: /assets/img/talks/pediatric-mental-health-summit-2025-800.jpg
+    src: /assets/img/talks/pediatric-mental-health-summit-2025-1400.jpg
+    alt: Adam Hansen at the podium moderating a three-person panel at the Pediatric Mental Health Summit in Austin
+    caption: Moderating a data-infrastructure panel, Pediatric Mental Health Summit, Austin, 2025
+
+- year: 2024
+  title: The Xia-Gibbs syndrome registry and Geneial’s platform
+  event: Xia-Gibbs Syndrome Family Conference, Houston
+  url: https://www.youtube.com/watch?v=_GTfWSEdsw4
+  link_label: Video
+
+- year: 2024
+  title: "“Industry Insights: Early-Stage Companies and Venture Capital in the Biotech Sector”"
+  event: ASHG Learning webinar, panelist
+  url: https://learning.ashg.org/products/industry-insights-early-stage-companies-and-venture-capital-in-the-biotech-sector
+  link_label: Event page
+  selected: true
+
+- year: 2023
+  title: Health equity innovation in precision medicine
+  event: Texas A&M Health symposium, panelist
+  url: https://doi.org/10.1186/s12961-024-01258-9
+  link_label: Paper from the symposium
+  selected: true
+
+- year: 2023
+  title: Patient registry information session, with Richard Gibbs and Jianhong Hu
+  event: Xia-Gibbs Society webinar
+  url: https://www.youtube.com/watch?v=jzx1e3Q4aNk
+  link_label: Video
+
+- year: 2023
+  title: "“Start-ups: Where to Start?”"
+  event: Baylor College of Medicine graduate school career series, panelist
+  url: https://give.bcm.edu/start-ups-where-to-start/
+  link_label: Recap
+
+- title: Rare-disease gene discovery
+  event: NHGRI Centers for Mendelian Genomics annual meeting
+  selected: true

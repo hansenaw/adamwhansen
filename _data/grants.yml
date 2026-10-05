@@ -1,0 +1,24 @@
+# Funded projects where you are PI (public NIH RePORTER records), newest first. Shown on /research/.
+# Don't list pending applications or amounts.
+
+- title: Increasing the Value of Genomic Medicine through Private Pharmacogenomic Reporting
+  funder: National Library of Medicine (NLM)
+  mechanism: SBIR Phase I (R43LM014350)
+  years: 2023–2024
+  role: Principal investigator
+  summary: >-
+    A pharmacogenomics reporting platform where patients keep ownership and control of their data,
+    with encrypted queries so standardized results can reach the point of care.
+  url: https://reporter.nih.gov/project-details/10760119
+
+- title: Privacy-Preserving Connectivity for Rare-Disease Patients
+  funder: National Human Genome Research Institute (NHGRI)
+  mechanism: STTR/SBIR fast track (R42HG012288 → R44HG012288), with an NIH I-Corps supplement
+  years: 2022–2025
+  role: Principal investigator
+  summary: >-
+    A privacy-preserving registry and community platform for rare-disease patients, advocates,
+    researchers, and therapy developers, built on FAIR data principles and starting with the
+    Xia-Gibbs syndrome registry. The first award NHGRI made under NIH’s Small Business Transition
+    Grant for Early-Career Scientists.
+  url: https://reporter.nih.gov/project-details/10886143

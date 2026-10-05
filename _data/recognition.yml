@@ -1,0 +1,67 @@
+# Recognition and service, newest first. Every item should have a public source.
+
+- year: 2026
+  title: Young Alumnus Award, Graduate School of Biomedical Sciences
+  detail: Baylor College of Medicine
+  sources:
+    - label: BCM
+      url: https://give.bcm.edu/2026alumniawards-hansen/
+      title: Baylor College of Medicine 2026 Alumni Awards profile
+
+- year: 2025
+  title: Best Paper Award, ML4H 2025
+  detail: >-
+    For “An Agentic Approach to Phenotype Mapping from Rare Disease Surveys,” from a Geneial team I
+    led; Jipeng Di and Julie Vaughn are co-first authors
+  sources:
+    - label: PMLR
+      url: https://proceedings.mlr.press/v297/di26a.html
+    - label: BCM
+      url: https://give.bcm.edu/2026alumniawards-hansen/
+      title: Award noted in Baylor College of Medicine’s 2026 Alumni Awards profile
+
+- year: 2024–2025
+  title: NIH peer reviewer
+  detail: Center for Scientific Review, small-business study sections
+  sources:
+    - label: Dec 2024 roster
+      url: https://public.era.nih.gov/pubroster/preSepIndex.era?CID=101323&AGENDA=527074
+      title: "NIH meeting roster: Small Business: Health Services and Systems"
+    - label: Jul 2025 roster
+      url: https://public.era.nih.gov/pubroster/preSepIndex.era?CID=101323&AGENDA=542062
+      title: "NIH meeting roster: Small Business: Computational, Modeling, and Biodata Management"
+
+- title: Industry advisory board, Department of Biomedical Informatics
+  detail: University of Utah
+  sources:
+    - label: Board list
+      url: https://medicine.utah.edu/dbmi/industry-opportunities/board-members
+      title: University of Utah Department of Biomedical Informatics industry board members
+
+- year: 2023
+  title: Reviewers’ Choice abstract, ASHG Annual Meeting
+  detail: Xia-Gibbs syndrome registry platform (first author)
+  sources:
+    - label: ASHG
+      url: https://www.ashg.org/wp-content/uploads/2023/10/ASHG2023-PosterAbstracts.pdf
+      title: "ASHG 2023 poster abstracts, PB4624"
+
+- year: 2022
+  title: First NHGRI award under NIH’s Small Business Transition Grant for Early-Career Scientists
+  detail: Privacy-Preserving Connectivity for Rare-Disease Patients
+  sources:
+    - label: NIH RePORTER
+      url: https://reporter.nih.gov/project-details/10378819
+
+- year: 2022
+  title: Winner, Slopes Serves + Hyperquake Creative Sprint
+  detail: Silicon Slopes StartFEST, one of two startups selected (Geneial)
+  # Silicon Slopes' newsroom article is offline; add an archived link here if one becomes reachable.
+
+- year: 2020–2021
+  title: TMC Biodesign Fellow
+  detail: Texas Medical Center
+  sources:
+    - label: TMC
+      url: https://www.tmc.edu/news/2020/08/tmc-biodesign-expands-startup-fellowship-beyond-medical-devices-and-digital-health/
+      title: "TMC News: 2020–2021 TMC Biodesign fellows"

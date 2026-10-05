@@ -1,0 +1,12 @@
+{%- comment -%}
+  One publication from _data/publications.yml.
+  Usage: {% include pub.html pub=pub %}
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+<li>
+  <a class="title" href="{{ pub.url }}">{{ pub.title }}</a>
+  <span class="meta">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}. <em>{{ pub.venue }}</em>, {{ pub.year }}.</span>
+  {%- if pub.note %}
+  <span class="note">{{ pub.note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>
+  {%- endif %}
+</li>

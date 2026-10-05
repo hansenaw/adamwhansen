@@ -1,0 +1,13 @@
+{%- comment -%}
+  One talk from _data/talks.yml. `year`, `url`, and `link_label` are optional.
+  Usage: {% include talk.html talk=talk %}
+{%- endcomment -%}
+{%- assign talk = include.talk -%}
+<li>
+  {%- if talk.url %}
+  <a class="title" href="{{ talk.url }}">{{ talk.title }}</a>
+  {%- else %}
+  <span class="title">{{ talk.title }}</span>
+  {%- endif %}
+  <span class="meta">{% if talk.year %}{{ talk.year }} · {% endif %}{{ talk.event }}{% if talk.link_label %} · {{ talk.link_label }}{% endif %}</span>
+</li>

@@ -1,0 +1,83 @@
+# Identity, photo, and links. Used across the site and in the data search engines read.
+
+name: Adam W. Hansen
+first_name: Adam
+last_name: Hansen
+honorific: PhD
+alternate_names:
+  - Adam Hansen
+  - Adam W Hansen
+
+# Shown under your name on the homepage.
+role_line: Computational geneticist · Founder and CEO of Geneial · Houston
+
+# Portrait beside the intro. Cropped from a MedTech Malta 2025 event photo.
+#   src:    4:5, 480×600, shown on wider screens
+#   tight:  4:5, 240×300, closer crop shown on phones
+#   square: 1:1, 600×600, used in search-engine data
+photo:
+  src: /assets/img/adam-hansen-portrait.jpg
+  tight: /assets/img/adam-hansen-portrait-tight.jpg
+  square: /assets/img/adam-hansen-square.jpg
+  alt: Adam W. Hansen speaking on a panel
+
+# The row of links under the intro.
+hero_links:
+  - label: Geneial
+    url: https://geneial.com
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=JV0hRFMAAAAJ
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/awhansen
+
+# Footer and search-engine profile links.
+#   same_as: true      → tells search engines this profile is you
+#   bibliography: true → linked from the publications section and the research page
+links:
+  - label: Geneial
+    url: https://geneial.com
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=JV0hRFMAAAAJ
+    same_as: true
+    bibliography: true
+  - label: ORCID
+    url: https://orcid.org/0000-0001-8123-2679
+    same_as: true
+    bibliography: true
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/awhansen
+    same_as: true
+
+# Search-engine profile (schema.org). Only facts that are public and current.
+schema:
+  job_title: Founder and CEO
+  works_for:
+    "@type": Organization
+    name: Geneial
+    url: https://geneial.com
+  alumni_of:
+    - "@type": CollegeOrUniversity
+      name: Baylor College of Medicine
+      url: https://www.bcm.edu
+    - "@type": CollegeOrUniversity
+      name: Brigham Young University
+      url: https://www.byu.edu
+  awards:
+    - Young Alumnus Award, Graduate School of Biomedical Sciences, Baylor College of Medicine (2026)
+  knows_about:
+    - Human genetics
+    - Rare disease
+    - Mendelian disease gene discovery
+    - Genomics
+    - Patient registries
+    - Natural history studies
+    - Health data privacy
+    - Pharmacogenomics
+    - Machine learning for health
+  knows_language:
+    - English
+    - Mandarin Chinese
+    - Spanish
+  work_location:
+    "@type": Place
+    name: Houston, Texas

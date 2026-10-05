@@ -1,0 +1,36 @@
+{%- comment -%}
+  Structured data for search engines (schema.org ProfilePage + Person).
+  Values come from _data/profile.yml and _copy/bio-short.md.
+{%- endcomment -%}
+{%- assign profile = site.data.profile -%}
+{%- assign short_bio = site.copy | where: "slug", "bio-short" | first -%}
+{%- assign same_as = "" | split: "" -%}
+{%- for link in profile.links -%}{%- if link.same_as -%}{%- assign same_as = same_as | push: link.url -%}{%- endif -%}{%- endfor -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": {{ "/" | absolute_url | jsonify }},
+  "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "@id": {{ "/#person" | absolute_url | jsonify }},
+    "name": {{ profile.name | jsonify }},
+    "alternateName": {{ profile.alternate_names | jsonify }},
+    "givenName": {{ profile.first_name | jsonify }},
+    "familyName": {{ profile.last_name | jsonify }},
+    "honorificSuffix": {{ profile.honorific | jsonify }},
+    "description": {{ short_bio.content | strip_html | normalize_whitespace | strip | jsonify }},
+    "jobTitle": {{ profile.schema.job_title | jsonify }},
+    "worksFor": {{ profile.schema.works_for | jsonify }},
+    "alumniOf": {{ profile.schema.alumni_of | jsonify }},
+    "award": {{ profile.schema.awards | jsonify }},
+    "knowsAbout": {{ profile.schema.knows_about | jsonify }},
+    "knowsLanguage": {{ profile.schema.knows_language | jsonify }},
+    "workLocation": {{ profile.schema.work_location | jsonify }},
+    "image": {{ profile.photo.square | absolute_url | jsonify }},
+    "url": {{ "/" | absolute_url | jsonify }},
+    "sameAs": {{ same_as | jsonify }}
+  }
+}
+</script>

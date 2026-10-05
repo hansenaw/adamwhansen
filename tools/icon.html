@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- Source for apple-touch-icon.png and favicon.ico. See README ("Regenerating images").
+     Open as icon.html#180 (square) or icon.html#32-rounded. -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: transparent; }
+  .icon {
+    --s: 180px;
+    display: grid;
+    place-items: center;
+    width: var(--s);
+    height: var(--s);
+    background: #a3402a;
+    color: #fbfaf7;
+    font: 700 calc(var(--s) * 0.46)/1 Charter, "Bitstream Charter", Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+  .icon.rounded { border-radius: 20%; }
+  .icon span { transform: translateY(0.03em); }
+</style>
+</head>
+<body>
+  <div class="icon"><span>AH</span></div>
+  <script>
+    var parts = location.hash.slice(1).split("-");
+    var icon = document.querySelector(".icon");
+    if (parts[0]) icon.style.setProperty("--s", parts[0] + "px");
+    if (parts[1] === "rounded") icon.classList.add("rounded");
+  </script>
+</body>
+</html>

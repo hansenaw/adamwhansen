@@ -1,2 +1,75 @@
-# adamwhansen
-Personal Website - Static Draft
+# adamwhansen.com
+
+Personal site of Adam W. Hansen. Plain HTML and CSS built by Jekyll, which GitHub Pages runs automatically: push to `gh-pages` and the live site updates in a minute or two. No framework, no analytics, no third-party requests.
+
+Pages: the homepage (`index.html`), `/research/`, and a 404 page.
+
+## What to edit
+
+Everything that changes lives in `_data/` (lists, in YAML) and `_copy/` (prose, in Markdown). You shouldn't need to touch layout files to keep the site current.
+
+| To change… | Edit |
+| --- | --- |
+| Name, title line, photo, profile links | `_data/profile.yml` |
+| The four facts under the intro | `_data/record.yml` |
+| Intro paragraph | `_copy/intro.md` |
+| "What I'm working on" | `_copy/now.md` |
+| "From gene discovery to Geneial" text | `_copy/through-line.md` |
+| The four-step progression under it | `_data/arc.yml` |
+| Papers (`selected: true` also shows one on the homepage) | `_data/publications.yml` |
+| Conference abstracts (research page) | `_data/abstracts.yml` |
+| NIH-funded projects (research page) | `_data/grants.yml` |
+| Patents, reports, and code (research page) | `_data/other_work.yml` |
+| Recognition and service | `_data/recognition.yml` |
+| Press and coverage | `_data/coverage.yml` |
+| Talks and panels (`selected: true` also shows one on the homepage) | `_data/talks.yml` |
+| Speaking topics | `_copy/speaking.md` |
+| Outside work, contact text | `_copy/outside.md`, `_copy/contact.md` |
+| Short description search engines read (not shown on the page) | `_copy/bio-short.md` |
+| Top navigation | `_data/nav.yml` |
+| Search title and description for the homepage | `_config.yml` |
+
+**Prose files (`_copy/`)** are Markdown: `**bold**`, `[link text](https://…)`, and `- ` for bullets. Keep the `---` lines at the top; Jekyll needs them.
+
+**Data files (`_data/`)** are YAML. Copy an existing entry and keep the indentation. Put any text containing a colon in straight double quotes, e.g. `title: "Start-ups: Where to Start?"`. You can edit these directly on github.com; GitHub rebuilds the site after each commit.
+
+**Sources:** almost every claim links to a third-party source (the small labeled tags). Keep it that way. Only add facts that are public and verifiable.
+
+## Preview locally
+
+One-time setup (already done on Adam's Mac): `brew install ruby@3.3`, then from this folder:
+
+```sh
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
+bundle config set --local path vendor/bundle
+bundle install
+```
+
+Each time:
+
+```sh
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH" LANG=en_US.UTF-8
+bundle exec jekyll serve
+```
+
+Then open http://localhost:4000. Edits to `_data/` and `_copy/` reload on refresh; changes to `_config.yml` need a restart. The `github-pages` gem pins the Jekyll version and plugins GitHub uses, so what you see locally is what deploys.
+
+## Deploy
+
+GitHub Pages builds the `gh-pages` branch (custom domain in `CNAME`). Commit, push, and check the live site after a couple of minutes. If a build fails, GitHub shows the error in the repository's Actions tab and the previous version stays live.
+
+## Regenerating images
+
+The share preview (`assets/img/og-card.png`) and the icons are rendered from HTML in `tools/` with headless Chrome:
+
+```sh
+tools/render.sh tools/og-card.html assets/img/og-card.png 1200 630
+tools/render.sh "tools/icon.html#180" assets/img/apple-touch-icon.png 180 180
+tools/render.sh "tools/icon.html#32-rounded" /tmp/favicon-32.png 32 32 && python3 tools/png2ico.py /tmp/favicon-32.png favicon.ico
+```
+
+Re-render the card if your name, title, or photo changes.
+
+## Legacy files
+
+`css/`, `js/`, `fonts/`, `images/`, and `createStatements.txt` are from the 2015–2022 site. `_config.yml` excludes them from the build, so they're no longer published. They can be deleted.
