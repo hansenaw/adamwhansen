@@ -11,5 +11,8 @@ vendor/
 # macOS
 .DS_Store
 
+# Old photos kept locally for possible reuse; not in the repo or on the site
+images/
+
 # Local editor and tool settings
 .claude/
