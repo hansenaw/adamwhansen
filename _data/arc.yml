@@ -1,5 +1,6 @@
 # The four steps under "From gene discovery to Geneial", oldest first.
-# Each step: when, title, text, and sources (small citation links).
+# Each step: when, title, text, sources (small citation links), and an optional figure
+# (polr2a or registry, drawn from _includes/fig-<name>.html).
 
 - when: 2016–2020 · Baylor College of Medicine
   title: Finding the genes behind rare diseases
@@ -18,6 +19,7 @@
     - label: HGG Adv 2021
       url: https://doi.org/10.1016/j.xhgg.2020.100014
       title: "Germline mutation in POLR2A (first author)"
+  figure: polr2a
 
 - when: Since 2020 · Geneial
   title: Infrastructure that keeps data private
@@ -55,6 +57,7 @@
     - label: Talk
       url: https://www.youtube.com/watch?v=n9Isrh_ZXuM
       title: "“Updates to the XGS Registry,” Xia-Gibbs Syndrome Family Conference 2026"
+  figure: registry
 
 - when: Since 2024 · Geneial
   title: AI for rare-disease research

@@ -1,6 +1,6 @@
 # adamwhansen.com
 
-Personal site of Adam W. Hansen. Plain HTML and CSS built by Jekyll, which GitHub Pages runs automatically: push to `gh-pages` and the live site updates in a minute or two. No framework, no analytics, no third-party requests.
+Personal site of Adam W. Hansen. Plain HTML and CSS built by Jekyll, which GitHub Pages runs automatically: push to `gh-pages` and the live site updates in a minute or two. No framework, no analytics, no third-party requests. Type is Newsreader (SIL Open Font License), self-hosted in `assets/fonts/`.
 
 Pages: the homepage (`index.html`), `/research/`, and a 404 page.
 
@@ -16,6 +16,9 @@ Everything that changes lives in `_data/` (lists, in YAML) and `_copy/` (prose, 
 | "What I'm working on" | `_copy/now.md` |
 | "From gene discovery to Geneial" text | `_copy/through-line.md` |
 | The four-step progression under it | `_data/arc.yml` |
+| "What I think" (the numbered positions in the dark band) | `_data/takes.yml` |
+| Figure 1 (POLR2A variant map) | `_data/polr2a_variants.yml` |
+| Figure 2 (Xia-Gibbs registry growth): refresh from the public dashboard now and then | `_data/xgs_registry.yml` |
 | Papers (`selected: true` also shows one on the homepage) | `_data/publications.yml` |
 | Conference abstracts (research page) | `_data/abstracts.yml` |
 | NIH-funded projects (research page) | `_data/grants.yml` |
@@ -25,6 +28,7 @@ Everything that changes lives in `_data/` (lists, in YAML) and `_copy/` (prose, 
 | Talks and panels (`selected: true` also shows one on the homepage) | `_data/talks.yml` |
 | Speaking topics | `_copy/speaking.md` |
 | Outside work, contact text | `_copy/outside.md`, `_copy/contact.md` |
+| Outside-work photos (4:5 crops in `assets/img/outside/`) | `_data/outside_photos.yml` |
 | Short description search engines read (not shown on the page) | `_copy/bio-short.md` |
 | Top navigation | `_data/nav.yml` |
 | Search title and description for the homepage | `_config.yml` |
@@ -37,7 +41,7 @@ Everything that changes lives in `_data/` (lists, in YAML) and `_copy/` (prose, 
 
 ## Preview locally
 
-One-time setup (already done on Adam's Mac): `brew install ruby@3.3`, then from this folder:
+One-time setup on a Mac: `brew install ruby@3.3`, then from this folder:
 
 ```sh
 export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
@@ -69,7 +73,3 @@ tools/render.sh "tools/icon.html#32-rounded" /tmp/favicon-32.png 32 32 && python
 ```
 
 Re-render the card if your name, title, or photo changes.
-
-## Legacy files
-
-`css/`, `js/`, `fonts/`, `images/`, and `createStatements.txt` are from the 2015–2022 site. `_config.yml` excludes them from the build, so they're no longer published. They can be deleted.

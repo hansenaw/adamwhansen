@@ -11,5 +11,5 @@ vendor/
 # macOS
 .DS_Store
 
-# Local preview config for the Claude desktop app
-.claude/launch.json
+# Local editor and tool settings
+.claude/

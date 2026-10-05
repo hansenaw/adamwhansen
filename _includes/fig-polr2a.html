@@ -1,0 +1,58 @@
+{%- comment -%}
+  Figure 1: POLR2A variant map, drawn from _data/polr2a_variants.yml.
+{%- endcomment -%}
+{%- assign d = site.data.polr2a_variants -%}
+{%- assign span = d.length | minus: 1 -%}
+{%- assign scale = 512.0 | divided_by: span -%}
+<figure class="fig" id="fig-polr2a">
+  <ul class="fig-legend" aria-hidden="true">
+    <li><span class="swatch t-missense"></span>Missense</li>
+    <li><span class="swatch t-inframe"></span>In-frame deletion</li>
+    <li><span class="swatch t-frameshift"></span>Frameshift</li>
+  </ul>
+  <div class="fig-scroll">
+    <svg viewBox="0 0 560 190" role="img" aria-labelledby="polr2a-title polr2a-desc">
+      <title id="polr2a-title">POLR2A variants in 12 individuals</title>
+      <desc id="polr2a-desc">Eleven variants plotted along the 1,970-amino-acid POLR2A protein: nine missense variants, one in-frame deletion near residue 438, and one frameshift at residue 1814. One missense variant, p.Asn1251Ser, was found in two people.</desc>
+      <rect class="fig-track" x="24" y="140" width="512" height="8" rx="4"></rect>
+      {%- for tick in (0..4) %}
+      {%- assign tick_pos = tick | times: 500 | at_least: 1 | at_most: d.length %}
+      {%- if tick == 4 %}{% assign tick_pos = d.length %}{% endif %}
+      {%- assign tx = tick_pos | minus: 1 | times: scale | plus: 24 | round: 1 %}
+      <text class="fig-axis{% if tick > 0 and tick < 4 %} tick-minor{% endif %}" x="{{ tx }}" y="168" text-anchor="middle">{{ tick_pos }}</text>
+      {%- endfor %}
+      <text class="fig-axis fig-axis-title" x="280" y="186" text-anchor="middle">Amino-acid position in POLR2A</text>
+      {%- for v in d.variants %}
+      {%- assign x = v.pos | minus: 1 | times: scale | plus: 24 | round: 1 %}
+      {%- assign y = 92 %}{% if v.lane == 1 %}{% assign y = 66 %}{% endif %}
+      <g class="fig-mark">
+        <title>{{ v.label }} ({{ v.cdna }}) · {{ v.people }} {% if v.people == 1 %}person{% else %}people{% endif %}</title>
+        <line class="fig-stem" x1="{{ x }}" y1="140" x2="{{ x }}" y2="{{ y }}"></line>
+        <circle class="fig-dot t-{{ v.type }}" cx="{{ x }}" cy="{{ y }}" r="5"></circle>
+        <circle class="fig-hit" cx="{{ x }}" cy="{{ y }}" r="11"></circle>
+        {%- if v.note %}
+        {%- if v.people > 1 %}
+        <text class="fig-label" x="{{ x | plus: 9 }}" y="{{ y | plus: 4 }}">{{ v.note }}</text>
+        {%- else %}
+        <text class="fig-label" x="{{ x }}" y="{{ y | minus: 13 }}" text-anchor="middle">{{ v.note }}</text>
+        {%- endif %}
+        {%- endif %}
+      </g>
+      {%- endfor %}
+    </svg>
+  </div>
+  <figcaption>
+    <strong>Figure 1.</strong> Variants in <em>POLR2A</em> found in 12 people with a developmental disorder, by position along the protein. From my first-author paper in <a href="https://doi.org/10.1016/j.xhgg.2020.100014"><em>HGG Advances</em> (2021)</a>.
+  </figcaption>
+  <details class="fig-data">
+    <summary>Data</summary>
+    <table>
+      <thead><tr><th scope="col">Variant</th><th scope="col">cDNA</th><th scope="col">Position</th><th scope="col">Type</th><th scope="col">People</th></tr></thead>
+      <tbody>
+        {%- for v in d.variants %}
+        <tr><td>{{ v.label }}</td><td>{{ v.cdna }}</td><td>{{ v.pos }}</td><td>{% case v.type %}{% when "inframe" %}In-frame deletion{% when "frameshift" %}Frameshift{% else %}Missense{% endcase %}</td><td>{{ v.people }}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+  </details>
+</figure>

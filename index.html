@@ -4,7 +4,7 @@
 {%- assign profile = site.data.profile -%}
 
 <header class="hero">
-  <h1>{{ profile.name }}<span class="post">, {{ profile.honorific }}</span></h1>
+  <h1>{{ profile.name }}, {{ profile.honorific }}</h1>
   <p class="role">{{ profile.role_line }}</p>
 
   <picture class="hero-photo">
@@ -52,6 +52,30 @@
       <h3>{{ step.title }}</h3>
       <p>{{ step.text }}</p>
       {% include cites.html sources=step.sources %}
+      {%- if step.figure %}
+      {%- assign figure_file = "fig-" | append: step.figure | append: ".html" %}
+      {% include {{ figure_file }} %}
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section class="section band" id="views" aria-labelledby="views-title">
+  <h2 id="views-title">What I think</h2>
+  <ol class="takes">
+    {%- for take in site.data.takes %}
+    <li>
+      <p class="take-claim">{{ take.claim }}</p>
+      <p class="take-body">{{ take.body }}</p>
+      {%- if take.tiers %}
+      <ol class="tiers">
+        {%- for tier in take.tiers %}
+        <li><span class="tier-name">{{ tier.name }}</span> {{ tier.text }}</li>
+        {%- endfor %}
+      </ol>
+      {%- endif %}
+      {% include cites.html sources=take.sources %}
     </li>
     {%- endfor %}
   </ol>
@@ -127,6 +151,11 @@
   <h2 id="outside-title">Outside work</h2>
   <div class="prose">
     {% include copy.html name="outside" %}
+  </div>
+  <div class="snapshots">
+    {%- for photo in site.data.outside_photos %}
+    <img src="{{ photo.src | relative_url }}" width="480" height="600" alt="{{ photo.alt | escape }}" loading="lazy" decoding="async">
+    {%- endfor %}
   </div>
 </section>
 

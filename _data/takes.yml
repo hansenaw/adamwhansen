@@ -1,0 +1,65 @@
+# "What I think": positions, in order. Keep each to a claim plus a few sentences.
+#   claim:   the position, stated plainly
+#   body:    why, in plain text
+#   tiers:   optional levels (name + text), shown as a left-to-right progression
+#   sources: optional evidence links, shown as small citation tags
+
+- claim: Eventually, every disease will be a rare disease.
+  body: >-
+    The better we understand a disease, the more it splits into smaller conditions defined by
+    genes and mechanisms, each with its own best treatment. Cancer is already going this way. And
+    the rarest cases often teach the most: families with inherited high cholesterol led
+    researchers to a gene called PCSK9, and from there to a new class of heart drugs. Rare disease
+    is where precision medicine starts.
+  sources:
+    - label: Nat Genet 2003
+      url: https://pubmed.ncbi.nlm.nih.gov/12730697/
+      title: "Abifadel et al., Mutations in PCSK9 cause autosomal dominant hypercholesterolemia"
+    - label: NEJM 2006
+      url: https://pubmed.ncbi.nlm.nih.gov/16554528/
+      title: "Cohen et al., Sequence variations in PCSK9, low LDL, and protection against coronary heart disease"
+    - label: ACC, 2015
+      url: https://www.acc.org/latest-in-cardiology/articles/2015/07/24/16/01/fda-approves-first-of-novel-cholesterol-lowering-drugs
+      title: "FDA approves first of novel cholesterol-lowering drugs"
+
+- claim: Our children will edit DNA to prevent and cure disease.
+  body: >-
+    Newborn genome sequencing is already being tested at scale in England and New York, and I
+    expect it to become routine everywhere. The first CRISPR therapy was approved in 2023. A
+    generation will grow up using its own genetic data to stay healthy longer. What’s missing is
+    the infrastructure to follow people for years and learn what genetic changes, inherited or
+    edited, do across a lifetime. That’s the part I work on.
+  sources:
+    - label: Generation Study
+      url: https://www.genomicsengland.co.uk/initiatives/newborns
+      title: "Genomics England: sequencing the genomes of 100,000 newborns"
+    - label: JAMA 2025
+      url: https://pubmed.ncbi.nlm.nih.gov/39446378/
+      title: "Ziegler et al., Expanded Newborn Screening Using Genome Sequencing for Early Actionable Conditions (GUARDIAN)"
+    - label: FDA, 2023
+      url: https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease
+      title: "FDA Approves First Gene Therapies to Treat Patients with Sickle Cell Disease"
+
+- claim: Rare-disease research stalls because patients and researchers lose touch.
+  body: >-
+    Families repeat their stories to every new study. Researchers rebuild cohorts from scratch.
+    The context that would make the next question easier to answer gets lost in between.
+    Participating in research should be a relationship that outlasts any single study, not a
+    one-time transaction.
+
+- claim: Consent is only the first level of data agency.
+  body: >-
+    Data agency is how much say people have over their own data. I think of it in three levels,
+    and most research stops at the first. Each level up earns more trust, and trust is what keeps
+    people involved long enough to build longitudinal data.
+  tiers:
+    - name: Consent
+      text: Agree to how your data may be used, and withdraw when you choose.
+    - name: Transparency
+      text: See who uses your data, and for what.
+    - name: Control
+      text: Approve or decline each use yourself.
+  sources:
+    - label: HRPS 2024
+      url: https://doi.org/10.1186/s12961-024-01258-9
+      title: "Health equity innovation in precision medicine: data stewardship and agency"

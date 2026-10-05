@@ -1,0 +1,54 @@
+{%- comment -%}
+  Figure 2: new participants per year in the Xia-Gibbs syndrome registry, from _data/xgs_registry.yml.
+{%- endcomment -%}
+{%- assign d = site.data.xgs_registry -%}
+{%- assign n = d.years.size -%}
+{%- assign band = 508.0 | divided_by: n -%}
+{%- assign ymax = 45.0 -%}
+{%- assign yscale = 156.0 | divided_by: ymax -%}
+<figure class="fig" id="fig-registry">
+  <div class="fig-scroll">
+    <svg viewBox="0 0 560 210" role="img" aria-labelledby="registry-title registry-desc">
+      <title id="registry-title">New participants per year, Xia-Gibbs syndrome registry</title>
+      <desc id="registry-desc">Bars for {{ d.years.first.year }} through {{ d.years.last.year }}. {{ d.summary }} {{ d.partial_year }} is a partial year. {{ d.total }} participants in total.</desc>
+      {%- for g in (0..2) %}
+      {%- assign gv = g | times: 20 %}
+      {%- assign gy = gv | times: yscale | minus: 180 | times: -1 | round: 1 %}
+      <line class="fig-grid" x1="36" y1="{{ gy }}" x2="544" y2="{{ gy }}"></line>
+      <text class="fig-axis" x="30" y="{{ gy | plus: 4 }}" text-anchor="end">{{ gv }}</text>
+      {%- endfor %}
+      {%- for row in d.years %}
+      {%- assign i = forloop.index0 %}
+      {%- assign bx = i | times: band | plus: 36 | plus: 11.1 | round: 1 %}
+      {%- assign h = row.new | times: yscale | round: 1 %}
+      {%- assign by = 180 | minus: h | round: 1 %}
+      {%- assign cx = bx | plus: 12 %}
+      {%- assign partial = false %}{% if row.year == d.partial_year %}{% assign partial = true %}{% endif %}
+      <g class="fig-mark">
+        <title>{{ row.year }}: {{ row.new }} new participants{% if partial %} (partial year){% endif %}</title>
+        <path class="fig-bar{% if partial %} is-partial{% endif %}" d="M{{ bx }},180 V{{ by | plus: 4 }} Q{{ bx }},{{ by }} {{ bx | plus: 4 }},{{ by }} H{{ bx | plus: 20 }} Q{{ bx | plus: 24 }},{{ by }} {{ bx | plus: 24 }},{{ by | plus: 4 }} V180 Z"></path>
+        <rect class="fig-hit" x="{{ bx | minus: 8 }}" y="20" width="40" height="160"></rect>
+        {%- if row.label %}
+        <text class="fig-label" x="{{ cx }}" y="{{ by | minus: 7 }}" text-anchor="middle">{{ row.new }}</text>
+        {%- endif %}
+        <text class="fig-axis{% if i == 0 or forloop.last or row.label %}{% else %} tick-minor{% endif %}" x="{{ cx }}" y="198" text-anchor="middle">{{ row.year }}</text>
+      </g>
+      {%- endfor %}
+      <line class="fig-baseline" x1="36" y1="180" x2="544" y2="180"></line>
+    </svg>
+  </div>
+  <figcaption>
+    <strong>Figure 2.</strong> New participants per year in the Xia-Gibbs syndrome registry. {{ d.total }} people have joined since {{ d.years.first.year }}; {{ d.partial_year }} is a partial year. Source: the registry’s <a href="{{ d.dashboard }}">public dashboard</a>, {{ d.as_of }}.
+  </figcaption>
+  <details class="fig-data">
+    <summary>Data</summary>
+    <table>
+      <thead><tr><th scope="col">Year</th><th scope="col">New participants</th></tr></thead>
+      <tbody>
+        {%- for row in d.years %}
+        <tr><td>{{ row.year }}{% if row.year == d.partial_year %} (partial){% endif %}</td><td>{{ row.new }}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+  </details>
+</figure>

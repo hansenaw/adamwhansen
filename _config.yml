@@ -40,9 +40,5 @@ exclude:
   - vendor
   - node_modules
   - tools
-  # Legacy files from the 2015–2022 site: kept in the repo, no longer published.
-  - createStatements.txt
-  - css
-  - js
-  - fonts
+  # Old photos kept locally for possible reuse; not published.
   - images

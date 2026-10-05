@@ -1,6 +1,8 @@
 # Top navigation, in order.
 - label: Work
   url: /#work
+- label: What I think
+  url: /#views
 - label: Research
   url: /research/
 - label: Contact
