@@ -21,6 +21,14 @@
   zh: { note: 主張以病患為中心、保護隱私的資料管理。 }
   selected: true
 
+- title: "Centers for Mendelian Genomics: a decade of facilitating gene discovery"
+  authors: "Baxter SM, Posey JE, Lake NJ, Sobreira N, … Gibbs RA, … Lupski JR, … Rehm HL, O’Donnell-Luria A; Centers for Mendelian Genomics Consortium"
+  venue: Genetics in Medicine
+  year: 2022
+  url: https://doi.org/10.1016/j.gim.2021.12.005
+  note: Consortium author, as a member of the Centers for Mendelian Genomics Consortium.
+  zh: { note: 以 Centers for Mendelian Genomics Consortium 成員身分列名的共同作者。 }
+
 - title: AHDC1 missense mutations in Xia-Gibbs syndrome
   authors: "Khayat MM, Hu J, Jiang Y, Li H, … **Hansen AW**, … Posey JE, Murdock D, Gibbs RA"
   venue: Human Genetics and Genomics Advances
@@ -74,3 +82,11 @@
   venue: Annals of Clinical and Translational Neurology
   year: 2018
   url: https://doi.org/10.1002/acn3.622
+
+- title: Whole genome comparison of a large collection of mycobacteriophages reveals a continuum of phage genetic diversity
+  authors: "Pope WH, Bowman CA, Russell DA, Jacobs-Sera D, … Lawrence JG, Hatfull GF; SEA-PHAGES and partner programs"
+  venue: eLife
+  year: 2015
+  url: https://doi.org/10.7554/eLife.06416
+  note: Consortium author, through the SEA-PHAGES undergraduate research program.
+  zh: { note: 透過 SEA-PHAGES 大學部研究計畫，以聯盟成員身分列名的共同作者。 }

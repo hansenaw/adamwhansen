@@ -1,7 +1,15 @@
-# Selected conference abstracts (first- or senior-author), newest first. Shown on /research/.
-#   role:   your position, in plain words
+# Selected conference abstracts, newest first. Shown on /research/.
+#   role:   your position, in plain words (Chinese versions are in _data/ui.yml under zh.terms)
+#   id:     optional poster or abstract number
 #   url:    the meeting's abstract book or abstract page
 #   award:  optional
+
+- title: Advancing computable operational definitions with ontology mapping and synthetic data simulation for more consistent real-world evidence
+  meeting: ISPOR 2026
+  id: RWD139
+  role: Senior author
+  year: 2026
+  url: https://www.valueinhealthjournal.com/article/S1098-3015(26)02265-5/fulltext
 
 - title: An agentic AI tool for automated data transformation from TOPMed to LinkML and Phenopackets
   meeting: ASHG 2025
@@ -37,6 +45,19 @@
   role: Senior author
   year: 2025
   url: https://www.ashg.org/wp-content/uploads/2025/10/2025-Poster-Abstracts.pdf
+
+- title: Understanding the autism phenotype among individuals with HNRNP-related neurodevelopmental disorders
+  meeting: INSAR 2025
+  role: Co-author
+  year: 2025
+  url: https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50289
+
+- title: "HNRNP-related neurodevelopmental disorders: expanding knowledge of known conditions and prompting novel studies into candidate genes"
+  meeting: ACMG 2025
+  id: Poster P263
+  role: Co-author
+  year: 2025
+  url: https://www.gimopen.org/article/S2949-7744(25)00267-5/fulltext
 
 - title: Using whole genome sequencing to call star alleles expands coverage and sensitivity for clinical pharmacogenomics decision-making
   meeting: ASHG 2024

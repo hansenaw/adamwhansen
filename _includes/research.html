@@ -30,7 +30,7 @@
     {%- assign award = item.award %}{% if zh and item.award %}{% assign award = ui.terms[item.award] | default: item.award %}{% endif %}
     <li>
       <a class="title" href="{{ item.url }}"{% if zh %} lang="en"{% endif %}>{{ item.title }}</a>
-      <span class="meta">{{ item.meeting }} · {{ item.id }} · {{ role }}{% if award %} · <strong>{{ award }}</strong>{% endif %}</span>
+      <span class="meta">{{ item.meeting }}{% if item.id %} · {{ item.id }}{% endif %} · {{ role }}{% if award %} · <strong>{{ award }}</strong>{% endif %}</span>
     </li>
     {%- endfor %}
   </ul>
