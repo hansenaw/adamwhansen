@@ -69,6 +69,20 @@
   body { -webkit-font-smoothing: antialiased; }
 }
 
+/* Traditional Chinese pages (/zh-tw/): Newsreader still sets Latin letters and numbers; Chinese
+   falls through to the reader's own system fonts, so no Chinese web font is downloaded. */
+html[lang="zh-Hant-TW"] {
+  --serif: "Newsreader", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --serif-display: "Newsreader", "Songti TC", "Noto Serif TC", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", serif;
+  --sans: system-ui, -apple-system, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+html[lang="zh-Hant-TW"] body { line-height: 1.75; }
+html[lang="zh-Hant-TW"] .lede { line-height: 1.7; }
+html[lang="zh-Hant-TW"] :is(h1, h2, h3, .take-claim, .site-header .home) {
+  font-family: var(--serif-display);
+  letter-spacing: 0.01em;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 
 html {
@@ -173,6 +187,24 @@ strong { font-weight: 650; }
   color: var(--ink);
   text-decoration: underline;
   text-decoration-color: var(--accent);
+}
+/* Link to the other language version: after the menu, set apart by a thin rule on wide screens;
+   beside the name on phones, so the menu below it doesn't wrap. */
+.site-header nav { margin-left: auto; }
+.site-header .lang-switch {
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--rule-strong);
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.site-header .lang-switch:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+@media (max-width: 45.99rem) {
+  .site-header .lang-switch { order: 2; margin-left: auto; padding-left: 0; border-left: 0; }
+  .site-header nav { order: 3; flex-basis: 100%; margin-left: 0; }
 }
 
 .site-footer {

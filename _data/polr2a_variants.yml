@@ -5,17 +5,18 @@
 #   people:  individuals carrying the variant
 #   lane:    0 or 1; raises a marker so close neighbors don't overlap
 #   note:    optional direct label on the chart
+#   zh:      Chinese label and note for /zh-tw/, where they differ from the English
 
 length: 1970
 variants:
   - { label: p.Pro28Arg,     cdna: c.83C>G,          pos: 28,   type: missense,   people: 1, lane: 0 }
   - { label: p.Arg108His,    cdna: c.323G>A,         pos: 108,  type: missense,   people: 1, lane: 0 }
   - { label: p.Arg140Trp,    cdna: c.418C>T,         pos: 140,  type: missense,   people: 1, lane: 1 }
-  - { label: In-frame deletion near residue 438, cdna: c.1314_1319del, pos: 438, type: inframe, people: 1, lane: 0, note: in-frame deletion }
+  - { label: In-frame deletion near residue 438, cdna: c.1314_1319del, pos: 438, type: inframe, people: 1, lane: 0, note: in-frame deletion, zh: { label: 第 438 個胺基酸附近的框內缺失, note: 框內缺失 } }
   - { label: p.Ala1092Val,   cdna: c.3275C>T,        pos: 1092, type: missense,   people: 1, lane: 0 }
   - { label: p.Ser1094Phe,   cdna: c.3281C>T,        pos: 1094, type: missense,   people: 1, lane: 1 }
   - { label: p.Thr1136Ile,   cdna: c.3407C>T,        pos: 1136, type: missense,   people: 1, lane: 0 }
   - { label: p.Asn1251Ser,   cdna: c.3752A>G,        pos: 1251, type: missense,   people: 2, lane: 0, note: "×2" }
   - { label: p.Gly1418Arg,   cdna: c.4252G>A,        pos: 1418, type: missense,   people: 1, lane: 0 }
   - { label: p.Arg1603His,   cdna: c.4808G>A,        pos: 1603, type: missense,   people: 1, lane: 0 }
-  - { label: Frameshift at residue 1814, cdna: c.5440_5441del, pos: 1814, type: frameshift, people: 1, lane: 0, note: frameshift }
+  - { label: Frameshift at residue 1814, cdna: c.5440_5441del, pos: 1814, type: frameshift, people: 1, lane: 0, note: frameshift, zh: { label: 第 1814 個胺基酸的移碼變異, note: 移碼變異 } }

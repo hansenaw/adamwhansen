@@ -1,0 +1,9 @@
+{%- comment -%}
+  Sets `zh` (true only on the Traditional Chinese pages, which declare `lang: zh-Hant-TW`)
+  and `ui` (interface text from _data/ui.yml). English pages never read Chinese text.
+  Usage: {% include lang.html %}
+{%- endcomment -%}
+{%- assign zh = false -%}
+{%- if page.lang == "zh-Hant-TW" -%}{%- assign zh = true -%}{%- endif -%}
+{%- assign ui = site.data.ui.en -%}
+{%- if zh -%}{%- assign ui = site.data.ui.zh -%}{%- endif -%}

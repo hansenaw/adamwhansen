@@ -1,6 +1,9 @@
+{%- include lang.html -%}
 {%- assign item = include.item -%}
+{%- assign t = item -%}
+{%- if zh and item.zh -%}{%- assign t = item.zh -%}{%- endif -%}
 <li>
-  <span class="title">{{ item.title }}</span>
-  <span class="meta">{% if item.year %}{{ item.year }} · {% endif %}{{ item.detail }}</span>
+  <span class="title">{{ t.title | default: item.title }}</span>
+  <span class="meta">{% if item.year %}{{ item.year }} · {% endif %}{{ t.detail | default: item.detail }}</span>
   {% include cites.html sources=item.sources %}
 </li>

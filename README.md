@@ -2,7 +2,7 @@
 
 Personal site of Adam W. Hansen. Plain HTML and CSS built by Jekyll, which GitHub Pages runs automatically: push to `gh-pages` and the live site updates in a minute or two. No framework, no analytics, no third-party requests. Type is Newsreader (SIL Open Font License), self-hosted in `assets/fonts/`.
 
-Pages: the homepage (`index.html`), `/research/`, and a 404 page.
+Pages: the homepage (`index.html`), `/research/`, and a 404 page, plus Traditional Chinese (Taiwan) versions of the homepage and research page at `/zh-tw/` and `/zh-tw/research/`. Both languages share one layout: `_includes/home.html` and `_includes/research.html`.
 
 ## What to edit
 
@@ -37,6 +37,8 @@ Everything that changes lives in `_data/` (lists, in YAML) and `_copy/` (prose, 
 
 **Data files (`_data/`)** are YAML. Copy an existing entry and keep the indentation. Put any text containing a colon in straight double quotes, e.g. `title: "Start-ups: Where to Start?"`. You can edit these directly on github.com; GitHub rebuilds the site after each commit.
 
+**Chinese version:** prose lives in `_copy/zh-tw/` (one file per English file in `_copy/`). In the data files, each item can carry a `zh:` block with the Chinese version of its text fields, e.g. `zh: { note: … }`; anything without one shows in English. Paper, abstract, and grant titles, author lists, and official talk titles stay in English on purpose. Section headings and other fixed labels are in `_data/ui.yml`. When you change English text, update its `zh:` version too.
+
 **Sources:** almost every claim links to a third-party source (the small labeled tags). Keep it that way. Only add facts that are public and verifiable.
 
 ## Preview locally
@@ -60,16 +62,23 @@ Then open http://localhost:4000. Edits to `_data/` and `_copy/` reload on refres
 
 ## Deploy
 
-GitHub Pages builds the `gh-pages` branch (custom domain in `CNAME`). Commit, push, and check the live site after a couple of minutes. If a build fails, GitHub shows the error in the repository's Actions tab and the previous version stays live.
+GitHub Pages builds the `gh-pages` branch (custom domain in `CNAME`). Before pushing, build the site and run the language check, which fails if any Chinese text shows up on an English page (other than the "中文" link) or a page uses the wrong share image:
+
+```sh
+bundle exec jekyll build && python3 tools/check_languages.py _site
+```
+
+Then commit, push, and check the live site after a couple of minutes. If a build fails, GitHub shows the error in the repository's Actions tab and the previous version stays live.
 
 ## Regenerating images
 
-The share preview (`assets/img/og-card.png`) and the icons are rendered from HTML in `tools/` with headless Chrome:
+The share previews (`assets/img/og-card.png`, and `og-card-zh-tw.png` for the Chinese pages) and the icons are rendered from HTML in `tools/` with headless Chrome:
 
 ```sh
 tools/render.sh tools/og-card.html assets/img/og-card.png 1200 630
+tools/render.sh tools/og-card-zh-tw.html assets/img/og-card-zh-tw.png 1200 630
 tools/render.sh "tools/icon.html#180" assets/img/apple-touch-icon.png 180 180
 tools/render.sh "tools/icon.html#32-rounded" /tmp/favicon-32.png 32 32 && python3 tools/png2ico.py /tmp/favicon-32.png favicon.ico
 ```
 
-Re-render the card if your name, title, or photo changes.
+Re-render the cards if your name, title, or photo changes.

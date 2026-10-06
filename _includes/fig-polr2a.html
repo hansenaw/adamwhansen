@@ -1,19 +1,31 @@
 {%- comment -%}
-  Figure 1: POLR2A variant map, drawn from _data/polr2a_variants.yml.
+  Figure 1: POLR2A variant map, drawn from _data/polr2a_variants.yml. English and Chinese text below.
 {%- endcomment -%}
+{%- include lang.html -%}
 {%- assign d = site.data.polr2a_variants -%}
 {%- assign span = d.length | minus: 1 -%}
 {%- assign scale = 512.0 | divided_by: span -%}
 <figure class="fig" id="fig-polr2a">
   <ul class="fig-legend" aria-hidden="true">
+    {%- if zh %}
+    <li><span class="swatch t-missense"></span>錯義變異</li>
+    <li><span class="swatch t-inframe"></span>框內缺失</li>
+    <li><span class="swatch t-frameshift"></span>移碼變異</li>
+    {%- else %}
     <li><span class="swatch t-missense"></span>Missense</li>
     <li><span class="swatch t-inframe"></span>In-frame deletion</li>
     <li><span class="swatch t-frameshift"></span>Frameshift</li>
+    {%- endif %}
   </ul>
   <div class="fig-scroll">
     <svg viewBox="0 0 560 190" role="img" aria-labelledby="polr2a-title polr2a-desc">
+      {%- if zh %}
+      <title id="polr2a-title">12 位個案的 POLR2A 變異</title>
+      <desc id="polr2a-desc">沿著長度 1,970 個胺基酸的 POLR2A 蛋白質標示 11 個變異：9 個錯義變異、1 個位於第 438 個胺基酸附近的框內缺失，以及 1 個位於第 1814 個胺基酸的移碼變異。其中錯義變異 p.Asn1251Ser 出現在兩個人身上。</desc>
+      {%- else %}
       <title id="polr2a-title">POLR2A variants in 12 individuals</title>
       <desc id="polr2a-desc">Eleven variants plotted along the 1,970-amino-acid POLR2A protein: nine missense variants, one in-frame deletion near residue 438, and one frameshift at residue 1814. One missense variant, p.Asn1251Ser, was found in two people.</desc>
+      {%- endif %}
       <rect class="fig-track" x="24" y="140" width="512" height="8" rx="4"></rect>
       {%- for tick in (0..4) %}
       {%- assign tick_pos = tick | times: 500 | at_least: 1 | at_most: d.length %}
@@ -21,20 +33,22 @@
       {%- assign tx = tick_pos | minus: 1 | times: scale | plus: 24 | round: 1 %}
       <text class="fig-axis{% if tick > 0 and tick < 4 %} tick-minor{% endif %}" x="{{ tx }}" y="168" text-anchor="middle">{{ tick_pos }}</text>
       {%- endfor %}
-      <text class="fig-axis fig-axis-title" x="280" y="186" text-anchor="middle">Amino-acid position in POLR2A</text>
+      <text class="fig-axis fig-axis-title" x="280" y="186" text-anchor="middle">{% if zh %}POLR2A 胺基酸位置{% else %}Amino-acid position in POLR2A{% endif %}</text>
       {%- for v in d.variants %}
       {%- assign x = v.pos | minus: 1 | times: scale | plus: 24 | round: 1 %}
       {%- assign y = 92 %}{% if v.lane == 1 %}{% assign y = 66 %}{% endif %}
+      {%- assign v_label = v.label %}{% if zh and v.zh.label %}{% assign v_label = v.zh.label %}{% endif %}
+      {%- assign v_note = v.note %}{% if zh and v.zh.note %}{% assign v_note = v.zh.note %}{% endif %}
       <g class="fig-mark">
-        <title>{{ v.label }} ({{ v.cdna }}) · {{ v.people }} {% if v.people == 1 %}person{% else %}people{% endif %}</title>
+        <title>{{ v_label }} ({{ v.cdna }}) · {% if zh %}{{ v.people }} 人{% else %}{{ v.people }} {% if v.people == 1 %}person{% else %}people{% endif %}{% endif %}</title>
         <line class="fig-stem" x1="{{ x }}" y1="140" x2="{{ x }}" y2="{{ y }}"></line>
         <circle class="fig-dot t-{{ v.type }}" cx="{{ x }}" cy="{{ y }}" r="5"></circle>
         <circle class="fig-hit" cx="{{ x }}" cy="{{ y }}" r="11"></circle>
-        {%- if v.note %}
+        {%- if v_note %}
         {%- if v.people > 1 %}
-        <text class="fig-label" x="{{ x | plus: 9 }}" y="{{ y | plus: 4 }}">{{ v.note }}</text>
+        <text class="fig-label" x="{{ x | plus: 9 }}" y="{{ y | plus: 4 }}">{{ v_note }}</text>
         {%- else %}
-        <text class="fig-label" x="{{ x }}" y="{{ y | minus: 13 }}" text-anchor="middle">{{ v.note }}</text>
+        <text class="fig-label" x="{{ x }}" y="{{ y | minus: 13 }}" text-anchor="middle">{{ v_note }}</text>
         {%- endif %}
         {%- endif %}
       </g>
@@ -42,15 +56,24 @@
     </svg>
   </div>
   <figcaption>
+    {%- if zh %}
+    <strong>圖 1.</strong> 在 12 位發展障礙患者身上發現的 <em>POLR2A</em> 變異，依其在蛋白質上的位置排列。資料來自我以第一作者發表於 <a href="https://doi.org/10.1016/j.xhgg.2020.100014"><em>HGG Advances</em>（2021）</a>的論文。
+    {%- else %}
     <strong>Figure 1.</strong> Variants in <em>POLR2A</em> found in 12 people with a developmental disorder, by position along the protein. From my first-author paper in <a href="https://doi.org/10.1016/j.xhgg.2020.100014"><em>HGG Advances</em> (2021)</a>.
+    {%- endif %}
   </figcaption>
   <details class="fig-data">
-    <summary>Data</summary>
+    <summary>{% if zh %}資料{% else %}Data{% endif %}</summary>
     <table>
+      {%- if zh %}
+      <thead><tr><th scope="col">變異</th><th scope="col">cDNA</th><th scope="col">位置</th><th scope="col">類型</th><th scope="col">人數</th></tr></thead>
+      {%- else %}
       <thead><tr><th scope="col">Variant</th><th scope="col">cDNA</th><th scope="col">Position</th><th scope="col">Type</th><th scope="col">People</th></tr></thead>
+      {%- endif %}
       <tbody>
         {%- for v in d.variants %}
-        <tr><td>{{ v.label }}</td><td>{{ v.cdna }}</td><td>{{ v.pos }}</td><td>{% case v.type %}{% when "inframe" %}In-frame deletion{% when "frameshift" %}Frameshift{% else %}Missense{% endcase %}</td><td>{{ v.people }}</td></tr>
+        {%- assign v_label = v.label %}{% if zh and v.zh.label %}{% assign v_label = v.zh.label %}{% endif %}
+        <tr><td>{{ v_label }}</td><td>{{ v.cdna }}</td><td>{{ v.pos }}</td><td>{% if zh %}{% case v.type %}{% when "inframe" %}框內缺失{% when "frameshift" %}移碼變異{% else %}錯義變異{% endcase %}{% else %}{% case v.type %}{% when "inframe" %}In-frame deletion{% when "frameshift" %}Frameshift{% else %}Missense{% endcase %}{% endif %}</td><td>{{ v.people }}</td></tr>
         {%- endfor %}
       </tbody>
     </table>

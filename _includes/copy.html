@@ -1,6 +1,16 @@
 {%- comment -%}
-  Outputs a prose block from _copy/<name>.md.
+  Outputs a prose block from _copy/<name>.md, or from _copy/zh-tw/<name>.md on the Chinese pages
+  (falling back to English if that translation doesn't exist yet).
   Usage: {% include copy.html name="intro" %}
 {%- endcomment -%}
-{%- assign block = site.copy | where: "slug", include.name | first -%}
+{%- include lang.html -%}
+{%- assign block = nil -%}
+{%- if zh -%}
+  {%- assign copy_path = "_copy/zh-tw/" | append: include.name | append: ".md" -%}
+  {%- assign block = site.copy | where: "relative_path", copy_path | first -%}
+{%- endif -%}
+{%- unless block -%}
+  {%- assign copy_path = "_copy/" | append: include.name | append: ".md" -%}
+  {%- assign block = site.copy | where: "relative_path", copy_path | first -%}
+{%- endunless -%}
 {{ block.content }}

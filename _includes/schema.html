@@ -3,7 +3,7 @@
   Values come from _data/profile.yml and _copy/bio-short.md.
 {%- endcomment -%}
 {%- assign profile = site.data.profile -%}
-{%- assign short_bio = site.copy | where: "slug", "bio-short" | first -%}
+{%- assign short_bio = site.copy | where: "relative_path", "_copy/bio-short.md" | first -%}
 {%- assign same_as = "" | split: "" -%}
 {%- for link in profile.links -%}{%- if link.same_as -%}{%- assign same_as = same_as | push: link.url -%}{%- endif -%}{%- endfor -%}
 <script type="application/ld+json">

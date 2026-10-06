@@ -1,6 +1,7 @@
 # The four steps under "From gene discovery to Geneial", oldest first.
 # Each step: when, title, text, sources (small citation links), and an optional figure
 # (polr2a or registry, drawn from _includes/fig-<name>.html).
+# `zh:` is the Traditional Chinese version for /zh-tw/; a source's `zh: { label }` translates its tag.
 
 - when: 2016–2020 · Baylor College of Medicine
   title: Finding the genes behind rare diseases
@@ -9,11 +10,16 @@
     from 18,696 people referred for suspected Mendelian disease and built a gene-first analysis that
     flagged 154 candidate disease genes. Follow-up papers characterized disorders tied to POLR2A and KIF1A,
     and I contributed to studies of Xia-Gibbs syndrome.
+  zh:
+    when: 2016–2020 · 貝勒醫學院
+    title: 找出罕見疾病背後的基因
+    text: 在人類基因體定序中心 Richard Gibbs 的研究團隊攻讀博士。我整合了 18,696 位疑似孟德爾遺傳疾病轉介者的外顯子組資料，建立以基因為核心的分析方法，找出 154 個候選致病基因。後續論文描述了與 POLR2A 及 KIF1A 相關的疾病，我也參與了 Xia-Gibbs 症候群的研究。
   sources:
     - label: AJHG 2019
       url: https://doi.org/10.1016/j.ajhg.2019.09.027
       title: "A Genocentric Approach to Discovery of Mendelian Disorders (first author)"
     - label: BCM News
+      zh: { label: BCM 新聞 }
       url: https://www.bcm.edu/news/connecting-gene-mutations-genetic-diseases
       title: "Connecting gene mutations, rare genetic diseases (Baylor College of Medicine, 2019)"
     - label: HGG Adv 2021
@@ -29,8 +35,14 @@
     analyzes homomorphically encrypted data without decrypting it, and principal investigator on
     NIH-funded projects in privacy-preserving connectivity for rare-disease patients (NHGRI) and
     patient-controlled pharmacogenomic reporting (NLM).
+  zh:
+    when: 2020 年起 · Geneial
+    title: 保護資料隱私的基礎設施
+    text: 罕見疾病資料稀少、分散，而且很容易被重新識別，所以隱私必須從一開始就內建，而不是事後補上。我是 Geneial 安全資料交換專利的共同發明人，這項技術能在不解密的情況下分析同態加密的資料；我也擔任 NIH 補助計畫的主持人，研究罕見疾病病患的隱私保護連結（NHGRI），以及由病患自主掌控的藥物基因體報告（NLM）。
   sources:
     - label: US Patent 12,417,301
+      zh:
+        label: 美國專利 12,417,301
       url: https://patents.google.com/patent/US12417301B2/en
       title: "Secure data exchange (issued September 2025)"
     - label: NHGRI
@@ -47,6 +59,10 @@
     Xia-Gibbs syndrome community: electronic consent, patient-reported surveys, and follow-up over
     time, with data that researchers can actually analyze. Our ASHG 2023 abstract on that registry
     platform was a Reviewers’ Choice selection.
+  zh:
+    when: 2022 年起 · Geneial
+    title: 讓人們能持續參與的研究
+    text: 為長期參與而設計的病患登錄與自然病史研究，從 Xia-Gibbs 症候群社群開始：電子知情同意、病患自填問卷與長期追蹤，產出研究人員真正能分析的資料。我們在 ASHG 2023 發表的這套登錄平台摘要，獲選為 Reviewers’ Choice（審查委員精選）。
   sources:
     - label: ASHG 2023
       url: https://www.ashg.org/wp-content/uploads/2023/10/ASHG2023-PosterAbstracts.pdf
@@ -55,6 +71,7 @@
       url: https://xia-gibbs.org/research-grant-2023/
       title: The patient organization on its registry collaboration with Geneial
     - label: Talk
+      zh: { label: 演講 }
       url: https://www.youtube.com/watch?v=n9Isrh_ZXuM
       title: "“Updates to the XGS Registry,” Xia-Gibbs Syndrome Family Conference 2026"
   figure: registry
@@ -66,6 +83,10 @@
     Catalyst, my team builds AI agents that turn messy research data into standard, analyzable
     formats. One of them, GenOMA, maps rare-disease survey questions to Human Phenotype Ontology
     terms; the paper received a Best Paper Award at ML4H 2025.
+  zh:
+    when: 2024 年起 · Geneial
+    title: 用於罕見疾病研究的 AI
+    text: 我的團隊參與由 RENCI 主導、與 NHLBI BioData Catalyst 合作、並由 ARPA-H 資助的資料標準化計畫，打造 AI 代理，把雜亂的研究資料轉換成標準、可分析的格式。其中的 GenOMA 能把罕見疾病問卷題目對應到人類表型本體（Human Phenotype Ontology）術語；這篇論文獲得 ML4H 2025 最佳論文獎。
   sources:
     - label: PMLR
       url: https://proceedings.mlr.press/v297/di26a.html
@@ -74,5 +95,6 @@
       url: https://renci.org/project/biodata-catalyst-biomedical-data-fabric/
       title: "BioData Catalyst / Biomedical Data Fabric project (lists Geneial as a partner)"
     - label: Code
+      zh: { label: 程式碼 }
       url: https://github.com/geneialco/GenOMA-Geneial-Ontology-Mapping-Agent
       title: "GenOMA source code on GitHub"

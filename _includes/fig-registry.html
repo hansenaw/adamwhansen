@@ -1,7 +1,11 @@
 {%- comment -%}
   Figure 2: new participants per year in the Xia-Gibbs syndrome registry, from _data/xgs_registry.yml.
+  English and Chinese text below; the Chinese summary and date come from `zh:` in the data file.
 {%- endcomment -%}
+{%- include lang.html -%}
 {%- assign d = site.data.xgs_registry -%}
+{%- assign summary = d.summary -%}{%- assign as_of = d.as_of -%}
+{%- if zh -%}{%- assign summary = d.zh.summary | default: d.summary -%}{%- assign as_of = d.zh.as_of | default: d.as_of -%}{%- endif -%}
 {%- assign n = d.years.size -%}
 {%- assign band = 508.0 | divided_by: n -%}
 {%- assign ymax = 45.0 -%}
@@ -9,8 +13,13 @@
 <figure class="fig" id="fig-registry">
   <div class="fig-scroll">
     <svg viewBox="0 0 560 210" role="img" aria-labelledby="registry-title registry-desc">
+      {%- if zh %}
+      <title id="registry-title">Xia-Gibbs 症候群病患登錄每年新增參與者</title>
+      <desc id="registry-desc">{{ d.years.first.year }} 至 {{ d.years.last.year }} 年的長條圖。{{ summary }}{{ d.partial_year }} 年尚未結束。總計 {{ d.total }} 位參與者。</desc>
+      {%- else %}
       <title id="registry-title">New participants per year, Xia-Gibbs syndrome registry</title>
-      <desc id="registry-desc">Bars for {{ d.years.first.year }} through {{ d.years.last.year }}. {{ d.summary }} {{ d.partial_year }} is a partial year. {{ d.total }} participants in total.</desc>
+      <desc id="registry-desc">Bars for {{ d.years.first.year }} through {{ d.years.last.year }}. {{ summary }} {{ d.partial_year }} is a partial year. {{ d.total }} participants in total.</desc>
+      {%- endif %}
       {%- for g in (0..2) %}
       {%- assign gv = g | times: 20 %}
       {%- assign gy = gv | times: yscale | minus: 180 | times: -1 | round: 1 %}
@@ -25,7 +34,11 @@
       {%- assign cx = bx | plus: 12 %}
       {%- assign partial = false %}{% if row.year == d.partial_year %}{% assign partial = true %}{% endif %}
       <g class="fig-mark">
+        {%- if zh %}
+        <title>{{ row.year }} 年：新增 {{ row.new }} 位參與者{% if partial %}（年度尚未結束）{% endif %}</title>
+        {%- else %}
         <title>{{ row.year }}: {{ row.new }} new participants{% if partial %} (partial year){% endif %}</title>
+        {%- endif %}
         <path class="fig-bar{% if partial %} is-partial{% endif %}" d="M{{ bx }},180 V{{ by | plus: 4 }} Q{{ bx }},{{ by }} {{ bx | plus: 4 }},{{ by }} H{{ bx | plus: 20 }} Q{{ bx | plus: 24 }},{{ by }} {{ bx | plus: 24 }},{{ by | plus: 4 }} V180 Z"></path>
         <rect class="fig-hit" x="{{ bx | minus: 8 }}" y="20" width="40" height="160"></rect>
         {%- if row.label %}
@@ -38,15 +51,23 @@
     </svg>
   </div>
   <figcaption>
-    <strong>Figure 2.</strong> New participants per year in the Xia-Gibbs syndrome registry. {{ d.total }} people have joined since {{ d.years.first.year }}; {{ d.partial_year }} is a partial year. Source: the registry’s <a href="{{ d.dashboard }}">public dashboard</a>, {{ d.as_of }}.
+    {%- if zh %}
+    <strong>圖 2.</strong> Xia-Gibbs 症候群病患登錄每年新增的參與者。自 {{ d.years.first.year }} 年以來共有 {{ d.total }} 人加入；{{ d.partial_year }} 年尚未結束。資料來源：該登錄的<a href="{{ d.dashboard }}">公開儀表板</a>，{{ as_of }}。
+    {%- else %}
+    <strong>Figure 2.</strong> New participants per year in the Xia-Gibbs syndrome registry. {{ d.total }} people have joined since {{ d.years.first.year }}; {{ d.partial_year }} is a partial year. Source: the registry’s <a href="{{ d.dashboard }}">public dashboard</a>, {{ as_of }}.
+    {%- endif %}
   </figcaption>
   <details class="fig-data">
-    <summary>Data</summary>
+    <summary>{% if zh %}資料{% else %}Data{% endif %}</summary>
     <table>
+      {%- if zh %}
+      <thead><tr><th scope="col">年份</th><th scope="col">新增參與者</th></tr></thead>
+      {%- else %}
       <thead><tr><th scope="col">Year</th><th scope="col">New participants</th></tr></thead>
+      {%- endif %}
       <tbody>
         {%- for row in d.years %}
-        <tr><td>{{ row.year }}{% if row.year == d.partial_year %} (partial){% endif %}</td><td>{{ row.new }}</td></tr>
+        <tr><td>{{ row.year }}{% if row.year == d.partial_year %}{% if zh %}（未滿一年）{% else %} (partial){% endif %}{% endif %}</td><td>{{ row.new }}</td></tr>
         {%- endfor %}
       </tbody>
     </table>

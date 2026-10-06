@@ -1,12 +1,16 @@
 {%- comment -%}
-  One publication from _data/publications.yml.
+  One publication from _data/publications.yml. Titles and citations stay in English on every page;
+  only the note is translated (zh.note).
   Usage: {% include pub.html pub=pub %}
 {%- endcomment -%}
+{%- include lang.html -%}
 {%- assign pub = include.pub -%}
+{%- assign note = pub.note -%}
+{%- if zh and pub.zh.note -%}{%- assign note = pub.zh.note -%}{%- endif -%}
 <li>
-  <a class="title" href="{{ pub.url }}">{{ pub.title }}</a>
-  <span class="meta">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}. <em>{{ pub.venue }}</em>, {{ pub.year }}.</span>
-  {%- if pub.note %}
-  <span class="note">{{ pub.note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>
+  <a class="title" href="{{ pub.url }}"{% if zh %} lang="en"{% endif %}>{{ pub.title }}</a>
+  <span class="meta"{% if zh %} lang="en"{% endif %}>{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}. <em>{{ pub.venue }}</em>, {{ pub.year }}.</span>
+  {%- if note %}
+  <span class="note">{{ note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>
   {%- endif %}
 </li>

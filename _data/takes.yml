@@ -3,6 +3,7 @@
 #   body:    why, in plain text
 #   tiers:   optional levels (name + text), shown as a left-to-right progression
 #   sources: optional evidence links, shown as small citation tags
+#   zh:      the Traditional Chinese claim, body, and tiers for /zh-tw/
 
 - claim: Eventually, every disease will be a rare disease.
   body: >-
@@ -11,6 +12,9 @@
     the rarest cases often teach the most: families with inherited high cholesterol led
     researchers to a gene called PCSK9, and from there to a new class of heart drugs. Rare disease
     is where precision medicine starts.
+  zh:
+    claim: 終有一天，每一種疾病都會是罕見疾病。
+    body: 我們越了解一種疾病，它就越會分化成由基因與致病機轉定義的更小病症，每一種都有各自最適合的治療。癌症已經在走這條路。而最罕見的個案往往最有啟發：遺傳性高膽固醇血症的家族，帶領研究人員找到 PCSK9 這個基因，進而發展出一類全新的心血管藥物。罕見疾病，正是精準醫療的起點。
   sources:
     - label: Nat Genet 2003
       url: https://pubmed.ncbi.nlm.nih.gov/12730697/
@@ -29,6 +33,9 @@
     generation will grow up using its own genetic data to stay healthy longer. What’s missing is
     the infrastructure to follow people for years and learn what genetic changes, inherited or
     edited, do across a lifetime. That’s the part I work on.
+  zh:
+    claim: 我們的下一代，將會編輯 DNA 來預防與治癒疾病。
+    body: 新生兒基因體定序已經在英格蘭與紐約進行大規模試驗，我預期它終將在世界各地成為常規。第一個 CRISPR 療法已在 2023 年獲准上市。新的一代將在成長過程中運用自己的基因資料，活得更久、更健康。目前缺少的，是能長年追蹤每個人、了解遺傳或經過編輯的基因變化在一生中帶來什麼影響的基礎設施。這正是我投入的部分。
   sources:
     - label: Generation Study
       url: https://www.genomicsengland.co.uk/initiatives/newborns
@@ -46,6 +53,9 @@
     The context that would make the next question easier to answer gets lost in between.
     Participating in research should be a relationship that outlasts any single study, not a
     one-time transaction.
+  zh:
+    claim: 罕見疾病研究之所以停滯，是因為病患與研究人員失去了聯繫。
+    body: 病友家庭得向每一項新研究重述自己的故事，研究人員得從頭重建研究族群，而能讓下一個問題更容易回答的脈絡，就在這中間流失了。參與研究應該是一段超越單一研究的長久關係，而不是一次性的交易。
 
 - claim: Consent is only the first level of data agency.
   body: >-
@@ -59,6 +69,16 @@
       text: See who uses your data, and for what.
     - name: Control
       text: Approve or decline each use yourself.
+  zh:
+    claim: 知情同意，只是資料自主權的第一個層級。
+    body: 資料自主權（data agency），指的是人們對自己的資料有多少決定權。我把它分成三個層級，而大多數研究停在第一層。每往上一層，就多贏得一分信任；而信任，正是讓人們願意長期參與、累積縱貫性資料的關鍵。
+    tiers:
+      - name: 知情同意
+        text: 同意自己的資料可以如何被使用，並可隨時撤回。
+      - name: 透明
+        text: 看得見誰在使用自己的資料，以及用途為何。
+      - name: 掌控
+        text: 每一次使用，都由自己決定同意或拒絕。
   sources:
     - label: HRPS 2024
       url: https://doi.org/10.1186/s12961-024-01258-9

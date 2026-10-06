@@ -1,0 +1,74 @@
+{%- comment -%}
+  The research page, shared by /research/ (English) and /zh-tw/research/ (Traditional Chinese).
+  Lists come from _data/publications.yml, abstracts.yml, talks.yml, grants.yml, and other_work.yml.
+  Paper, abstract, and grant titles stay in English on both pages.
+{%- endcomment -%}
+{%- include lang.html -%}
+{%- assign profile = site.data.profile -%}
+{%- assign bibliography = profile.links | where: "bibliography", true -%}
+
+<header class="page-head">
+  <h1>{{ page.title }}</h1>
+  <p>{{ ui.research_intro }}
+    {%- for link in bibliography %}{% if zh %}{% if forloop.first %} {% elsif forloop.last %} 與 {% else %}、{% endif %}<a href="{{ link.url }}">{{ link.label }}</a>{% else %}{% if forloop.last and forloop.length > 1 %} and{% elsif forloop.index > 1 %},{% endif %} <a href="{{ link.url }}">{{ link.label }}</a>{% endif %}{% endfor %}{% if zh %}。{% else %}.{% endif %}</p>
+</header>
+
+<section class="section" id="papers" aria-labelledby="papers-title">
+  <h2 id="papers-title">{{ ui.papers }}</h2>
+  <ol class="refs">
+    {%- for pub in site.data.publications %}
+    {% include pub.html pub=pub %}
+    {%- endfor %}
+  </ol>
+</section>
+
+<section class="section" id="abstracts" aria-labelledby="abstracts-title">
+  <h2 id="abstracts-title">{{ ui.abstracts }}</h2>
+  <ul class="refs">
+    {%- for item in site.data.abstracts %}
+    {%- assign role = item.role %}{% if zh %}{% assign role = ui.terms[item.role] | default: item.role %}{% endif %}
+    {%- assign award = item.award %}{% if zh and item.award %}{% assign award = ui.terms[item.award] | default: item.award %}{% endif %}
+    <li>
+      <a class="title" href="{{ item.url }}"{% if zh %} lang="en"{% endif %}>{{ item.title }}</a>
+      <span class="meta">{{ item.meeting }} · {{ item.id }} · {{ role }}{% if award %} · <strong>{{ award }}</strong>{% endif %}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="section" id="talks" aria-labelledby="talks-title">
+  <h2 id="talks-title">{{ ui.talks }}</h2>
+  <ul class="refs">
+    {%- for talk in site.data.talks %}
+    {% include talk.html talk=talk %}
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="section" id="grants" aria-labelledby="grants-title">
+  <h2 id="grants-title">{{ ui.grants }}</h2>
+  <ul class="refs">
+    {%- for grant in site.data.grants %}
+    {%- assign t = grant %}{% if zh and grant.zh %}{% assign t = grant.zh %}{% endif %}
+    {%- assign role = grant.role %}{% if zh %}{% assign role = ui.terms[grant.role] | default: grant.role %}{% endif %}
+    <li>
+      <a class="title" href="{{ grant.url }}"{% if zh %} lang="en"{% endif %}>{{ grant.title }}</a>
+      <span class="meta">{{ t.funder | default: grant.funder }} · {{ t.mechanism | default: grant.mechanism }} · {{ grant.years }} · {{ role }}</span>
+      <span class="note">{{ t.summary | default: grant.summary }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="section" id="other" aria-labelledby="other-title">
+  <h2 id="other-title">{{ ui.other }}</h2>
+  <ul class="refs">
+    {%- for item in site.data.other_work %}
+    {%- assign t = item %}{% if zh and item.zh %}{% assign t = item.zh %}{% endif %}
+    <li>
+      <a class="title" href="{{ item.url }}"{% if zh %} lang="en"{% endif %}>{{ item.title }}</a>
+      <span class="meta">{{ t.kind | default: item.kind }} · {{ item.year }} · {{ t.role | default: item.role }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

@@ -1,13 +1,23 @@
+{%- include lang.html -%}
+{%- assign base = "" -%}{%- if zh -%}{%- assign base = "/zh-tw" -%}{%- endif -%}
+{%- assign home_path = base | append: "/" -%}
 <header class="site-header">
   <div class="wrap">
-    <a class="home" href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>{{ site.data.profile.name }}</a>
-    <nav aria-label="Site">
+    <a class="home" href="{{ home_path | relative_url }}"{% if page.url == home_path %} aria-current="page"{% endif %}>{% if zh %}{{ site.data.profile.zh.name }}{% else %}{{ site.data.profile.name }}{% endif %}</a>
+    <nav aria-label="{{ ui.nav_label }}">
       <ul>
         {%- for item in site.data.nav %}
-        {%- assign item_url = item.url | relative_url %}
-        <li><a href="{{ item_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- assign item_path = base | append: item.url %}
+        <li><a href="{{ item_path | relative_url }}"{% if page.url == item_path %} aria-current="page"{% endif %}>{% if zh and item.zh %}{{ item.zh.label }}{% else %}{{ item.label }}{% endif %}</a></li>
         {%- endfor %}
       </ul>
     </nav>
+    {%- if page.alt %}
+    {%- if zh %}
+    <a class="lang-switch" href="{{ page.alt | relative_url }}" hreflang="en" lang="en">English</a>
+    {%- else %}
+    <a class="lang-switch" href="{{ page.alt | relative_url }}" hreflang="zh-Hant-TW" lang="zh-Hant-TW">中文</a>
+    {%- endif %}
+    {%- endif %}
   </div>
 </header>

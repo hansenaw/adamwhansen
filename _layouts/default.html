@@ -1,10 +1,11 @@
+{%- include lang.html -%}
 <!doctype html>
-<html lang="{{ site.lang }}">
+<html lang="{{ page.lang | default: site.lang }}">
 <head>
 {% include head.html %}
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">{{ ui.skip }}</a>
   {% include header.html %}
   <main id="main" class="wrap">
     {{ content }}

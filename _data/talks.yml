@@ -7,6 +7,7 @@
 - year: 2026
   title: "“Updates to the XGS Registry”"
   event: Xia-Gibbs Syndrome Family Conference
+  zh: { link_label: 影片 }
   url: https://www.youtube.com/watch?v=n9Isrh_ZXuM
   link_label: Video
   selected: true
@@ -14,6 +15,11 @@
 - year: 2025
   title: "“Precision Medicine in MedTech: Shaping the Future of Personalised Care”"
   event: MedTech World Malta, Valletta, panelist
+  zh:
+    event: MedTech World Malta，馬爾他瓦勒他，與談人
+    link_label: 活動網站
+    photo_alt: 漢曉陽在 MedTech Malta 2025 的四人精準醫療座談中發言，背後螢幕顯示座談主題與與談人
+    photo_caption: 精準醫療座談，MedTech Malta 2025
   url: https://med-tech.world/malta/
   link_label: Event site
   selected: true
@@ -28,6 +34,11 @@
   event: >-
     Pediatric Mental Health Summit: Reimagining Inpatient Care within the Full Continuum of Care,
     Texas A&M Health, Austin, panel moderator
+  zh:
+    event: Pediatric Mental Health Summit：Reimagining Inpatient Care within the Full Continuum of Care，德州農工大學健康科學中心（Texas A&M Health），奧斯汀，座談主持人
+    link_label: 峰會報告（PDF）
+    photo_alt: 漢曉陽在奧斯汀的兒童心理健康峰會上，站在講台主持三人座談
+    photo_caption: 主持資料基礎設施座談，兒童心理健康峰會，奧斯汀，2025
   url: https://ccha.tamu.edu/_files/_documents/documents/smhsca-final-report.pdf
   link_label: Summit report (PDF)
   selected: true
@@ -39,6 +50,10 @@
 
 - year: 2024
   title: The Xia-Gibbs syndrome registry and Geneial’s platform
+  zh:
+    title: Xia-Gibbs 症候群病患登錄與 Geneial 平台
+    event: Xia-Gibbs Syndrome Family Conference，休士頓
+    link_label: 影片
   event: Xia-Gibbs Syndrome Family Conference, Houston
   url: https://www.youtube.com/watch?v=_GTfWSEdsw4
   link_label: Video
@@ -46,12 +61,19 @@
 - year: 2024
   title: "“Industry Insights: Early-Stage Companies and Venture Capital in the Biotech Sector”"
   event: ASHG Learning webinar, panelist
+  zh:
+    event: ASHG Learning 線上研討會，與談人
+    link_label: 活動頁面
   url: https://learning.ashg.org/products/industry-insights-early-stage-companies-and-venture-capital-in-the-biotech-sector
   link_label: Event page
   selected: true
 
 - year: 2023
   title: Health equity innovation in precision medicine
+  zh:
+    title: 精準醫療中的健康公平創新
+    event: 德州農工大學健康科學中心（Texas A&M Health）研討會，與談人
+    link_label: 研討會衍生論文
   event: Texas A&M Health symposium, panelist
   url: https://doi.org/10.1186/s12961-024-01258-9
   link_label: Paper from the symposium
@@ -59,6 +81,10 @@
 
 - year: 2023
   title: Patient registry information session, with Richard Gibbs and Jianhong Hu
+  zh:
+    title: 病患登錄說明會，與 Richard Gibbs、Jianhong Hu 共同主講
+    event: Xia-Gibbs Society 線上說明會
+    link_label: 影片
   event: Xia-Gibbs Society webinar
   url: https://www.youtube.com/watch?v=jzx1e3Q4aNk
   link_label: Video
@@ -66,9 +92,15 @@
 - year: 2023
   title: "“Start-ups: Where to Start?”"
   event: Baylor College of Medicine graduate school career series, panelist
+  zh:
+    event: 貝勒醫學院研究所職涯系列講座，與談人
+    link_label: 活動回顧
   url: https://give.bcm.edu/start-ups-where-to-start/
   link_label: Recap
 
 - title: Rare-disease gene discovery
+  zh:
+    title: 罕見疾病基因發現
+    event: NHGRI 孟德爾基因體學中心（Centers for Mendelian Genomics）年會
   event: NHGRI Centers for Mendelian Genomics annual meeting
   selected: true

@@ -9,6 +9,7 @@
   year: 2026
   url: https://proceedings.mlr.press/v297/di26a.html
   note: "Senior author; \\*co-first authors. I led the R&D program behind it. Best Paper Award, ML4H 2025."
+  zh: { note: "資深作者；\\*共同第一作者。我主導了這項研究背後的研發計畫。獲 ML4H 2025 最佳論文獎。" }
   selected: true
 
 - title: "Health equity innovation in precision medicine: data stewardship and agency to expand representation in clinicogenomics"
@@ -17,6 +18,7 @@
   year: 2024
   url: https://doi.org/10.1186/s12961-024-01258-9
   note: A case for patient-centered, privacy-preserving data stewardship.
+  zh: { note: 主張以病患為中心、保護隱私的資料管理。 }
   selected: true
 
 - title: AHDC1 missense mutations in Xia-Gibbs syndrome
@@ -25,6 +27,7 @@
   year: 2021
   url: https://doi.org/10.1016/j.xhgg.2021.100049
   note: Five of the ten individuals came through the Xia-Gibbs syndrome registry.
+  zh: { note: 十位個案中，有五位來自 Xia-Gibbs 症候群病患登錄。 }
   selected: true
 
 - title: "Germline mutation in POLR2A: a heterogeneous, multi-systemic developmental disorder characterized by transcriptional dysregulation"
@@ -33,6 +36,7 @@
   year: 2021
   url: https://doi.org/10.1016/j.xhgg.2020.100014
   note: First and co-corresponding author.
+  zh: { note: 第一作者暨共同通訊作者。 }
   selected: true
 
 - title: "Phenotypic and protein localization heterogeneity associated with AHDC1 pathogenic protein-truncating alleles in Xia-Gibbs syndrome"
@@ -53,6 +57,7 @@
   year: 2020
   url: https://doi.org/10.1002/humu.24118
   note: "\\*Co-first author; co-corresponding."
+  zh: { note: "\\*共同第一作者；共同通訊作者。" }
   selected: true
 
 - title: A genocentric approach to discovery of Mendelian disorders
@@ -61,6 +66,7 @@
   year: 2019
   url: https://doi.org/10.1016/j.ajhg.2019.09.027
   note: "First author. 154 candidate disease genes from exome data on 18,696 people."
+  zh: { note: "第一作者。從 18,696 人的外顯子組資料中找出 154 個候選致病基因。" }
   selected: true
 
 - title: "Phenotypic expansion in DDX3X: a common cause of intellectual disability in females"

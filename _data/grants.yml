@@ -4,6 +4,10 @@
 - title: Increasing the Value of Genomic Medicine through Private Pharmacogenomic Reporting
   funder: National Library of Medicine (NLM)
   mechanism: SBIR Phase I (R43LM014350)
+  zh:
+    funder: 美國國家醫學圖書館（NLM）
+    mechanism: SBIR 第一階段（R43LM014350）
+    summary: 一個讓病患保有資料所有權與掌控權的藥物基因體報告平台，透過加密查詢，讓標準化的結果能送達醫療現場。
   years: 2023–2024
   role: Principal investigator
   summary: >-
@@ -14,6 +18,10 @@
 - title: Privacy-Preserving Connectivity for Rare-Disease Patients
   funder: National Human Genome Research Institute (NHGRI)
   mechanism: STTR/SBIR fast track (R42HG012288 → R44HG012288), with an NIH I-Corps supplement
+  zh:
+    funder: 美國國家人類基因體研究所（NHGRI）
+    mechanism: STTR/SBIR 快速通道（R42HG012288 → R44HG012288），並獲 NIH I-Corps 補充經費
+    summary: 為罕見疾病病患、倡議者、研究人員與療法開發者打造的隱私保護病患登錄與社群平台，遵循 FAIR 資料原則，並從 Xia-Gibbs 症候群病患登錄開始。這是 NHGRI 依 NIH 早期職涯科學家小型企業轉型補助（Small Business Transition Grant for Early-Career Scientists）核發的第一筆補助。
   years: 2022–2025
   role: Principal investigator
   summary: >-

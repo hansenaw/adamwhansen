@@ -1,9 +1,13 @@
 # Top navigation, in order.
 - label: Work
+  zh: { label: 經歷 }
   url: /#work
 - label: What I think
+  zh: { label: 我的觀點 }
   url: /#views
 - label: Research
+  zh: { label: 研究 }
   url: /research/
 - label: Contact
+  zh: { label: 聯絡 }
   url: /#contact

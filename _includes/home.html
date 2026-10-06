@@ -1,0 +1,183 @@
+{%- comment -%}
+  The homepage, shared by / (English) and /zh-tw/ (Traditional Chinese).
+  To change the words, edit _copy/ (and _copy/zh-tw/); to change lists, edit _data/*.yml.
+  Translated fields live under `zh:` on each item; English is used wherever one is missing.
+{%- endcomment -%}
+{%- include lang.html -%}
+{%- assign profile = site.data.profile -%}
+{%- assign base = "" -%}{%- if zh -%}{%- assign base = "/zh-tw" -%}{%- endif -%}
+
+<header class="hero">
+  {%- if zh %}
+  <h1>{{ profile.zh.name }}</h1>
+  <p class="role"><span lang="en">{{ profile.name }}, {{ profile.honorific }}</span> · {{ profile.zh.role_line }}</p>
+  {%- else %}
+  <h1>{{ profile.name }}, {{ profile.honorific }}</h1>
+  <p class="role">{{ profile.role_line }}</p>
+  {%- endif %}
+
+  <picture class="hero-photo">
+    <source media="(min-width: 46rem)" srcset="{{ profile.photo.src | relative_url }}" width="480" height="600">
+    <img src="{{ profile.photo.tight | relative_url }}" width="240" height="300" alt="{% if zh %}{{ profile.zh.photo_alt }}{% else %}{{ profile.photo.alt }}{% endif %}" fetchpriority="high">
+  </picture>
+
+  <div class="lede">
+    {% include copy.html name="intro" %}
+  </div>
+
+  <ul class="actions">
+    {%- for link in profile.hero_links %}
+    <li><a href="{{ link.url | relative_url }}">{{ link.label }}</a></li>
+    {%- endfor %}
+  </ul>
+
+  <h2 class="visually-hidden">{{ ui.background }}</h2>
+  <ul class="record">
+    {%- for item in site.data.record %}
+    {%- assign t = item %}{% if zh and item.zh %}{% assign t = item.zh %}{% endif %}
+    <li>
+      <span>{{ t.text | default: item.text }}</span>
+      {% include cites.html sources=item.sources %}
+    </li>
+    {%- endfor %}
+  </ul>
+</header>
+
+<section class="section" id="now" aria-labelledby="now-title">
+  <h2 id="now-title">{{ ui.now }}</h2>
+  <div class="prose">
+    {% include copy.html name="now" %}
+  </div>
+</section>
+
+<section class="section" id="work" aria-labelledby="work-title">
+  <h2 id="work-title">{{ ui.work }}</h2>
+  <div class="prose">
+    {% include copy.html name="through-line" %}
+  </div>
+  <ol class="arc">
+    {%- for step in site.data.arc %}
+    {%- assign t = step %}{% if zh and step.zh %}{% assign t = step.zh %}{% endif %}
+    <li>
+      <p class="meta">{{ t.when | default: step.when }}</p>
+      <h3>{{ t.title | default: step.title }}</h3>
+      <p>{{ t.text | default: step.text }}</p>
+      {% include cites.html sources=step.sources %}
+      {%- if step.figure %}
+      {%- assign figure_file = "fig-" | append: step.figure | append: ".html" %}
+      {% include {{ figure_file }} %}
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section class="section band" id="views" aria-labelledby="views-title">
+  <h2 id="views-title">{{ ui.views }}</h2>
+  <ol class="takes">
+    {%- for take in site.data.takes %}
+    {%- assign t = take %}{% if zh and take.zh %}{% assign t = take.zh %}{% endif %}
+    {%- assign tiers = t.tiers | default: take.tiers %}
+    <li>
+      <p class="take-claim">{{ t.claim | default: take.claim }}</p>
+      <p class="take-body">{{ t.body | default: take.body }}</p>
+      {%- if tiers %}
+      <ol class="tiers">
+        {%- for tier in tiers %}
+        <li><span class="tier-name">{{ tier.name }}</span> {{ tier.text }}</li>
+        {%- endfor %}
+      </ol>
+      {%- endif %}
+      {% include cites.html sources=take.sources %}
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section class="section" id="publications" aria-labelledby="publications-title">
+  <h2 id="publications-title">{{ ui.publications }}</h2>
+  <ol class="refs">
+    {%- for pub in site.data.publications %}
+    {%- if pub.selected %}
+    {% include pub.html pub=pub %}
+    {%- endif %}
+    {%- endfor %}
+  </ol>
+  <p class="more">
+    <a href="{{ base | append: '/research/' | relative_url }}">{{ ui.publications_more }}</a>
+    {%- for link in profile.links %}{% if link.bibliography %} · <a href="{{ link.url }}">{{ link.label }}</a>{% endif %}{% endfor %}
+  </p>
+</section>
+
+<section class="section" id="recognition" aria-labelledby="recognition-title">
+  <h2 id="recognition-title">{{ ui.recognition }}</h2>
+  <ul class="refs">
+    {%- for item in site.data.recognition %}
+    {% include recognition-item.html item=item %}
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="section" id="coverage" aria-labelledby="coverage-title">
+  <h2 id="coverage-title">{{ ui.coverage }}</h2>
+  <ul class="refs">
+    {%- for item in site.data.coverage %}
+    {%- assign t = item %}{% if zh and item.zh %}{% assign t = item.zh %}{% endif %}
+    <li>
+      <a class="title" href="{{ item.url }}"{% if zh %} lang="en"{% endif %}>{{ item.title }}</a>
+      <span class="meta">{{ item.outlet }} · {{ item.date | date: ui.month_format }}</span>
+      {%- if item.note %}
+      <span class="note">{{ t.note | default: item.note }}</span>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="section" id="speaking" aria-labelledby="speaking-title">
+  <h2 id="speaking-title">{{ ui.speaking }}</h2>
+  <div class="prose">
+    {% include copy.html name="speaking" %}
+  </div>
+  {%- assign talk_photos = site.data.talks | where_exp: "talk", "talk.photo" %}
+  {%- if talk_photos.size > 0 %}
+  <div class="photos">
+    {%- for talk in talk_photos %}
+    {%- assign t = talk %}{% if zh and talk.zh %}{% assign t = talk.zh %}{% endif %}
+    <figure>
+      <a href="{{ talk.photo.src | relative_url }}"><img src="{{ talk.photo.small | relative_url }}" width="800" height="533" alt="{{ t.photo_alt | default: talk.photo.alt | escape }}" loading="lazy" decoding="async"></a>
+      <figcaption class="meta">{{ t.photo_caption | default: talk.photo.caption }}</figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+  <h3 class="subhead">{{ ui.talks_selected }}</h3>
+  <ul class="refs">
+    {%- for talk in site.data.talks %}
+    {%- if talk.selected %}
+    {% include talk.html talk=talk %}
+    {%- endif %}
+    {%- endfor %}
+  </ul>
+  <p class="more"><a href="{{ base | append: '/research/#talks' | relative_url }}">{{ ui.talks_more }}</a></p>
+</section>
+
+<section class="section" id="outside" aria-labelledby="outside-title">
+  <h2 id="outside-title">{{ ui.outside }}</h2>
+  <div class="prose">
+    {% include copy.html name="outside" %}
+  </div>
+  <div class="snapshots">
+    {%- for photo in site.data.outside_photos %}
+    {%- assign alt = photo.alt %}{% if zh and photo.zh.alt %}{% assign alt = photo.zh.alt %}{% endif %}
+    <img src="{{ photo.src | relative_url }}" width="480" height="600" alt="{{ alt | escape }}" loading="lazy" decoding="async">
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">{{ ui.contact }}</h2>
+  <div class="prose">
+    {% include copy.html name="contact" %}
+  </div>
+</section>

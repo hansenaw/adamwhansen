@@ -2,11 +2,15 @@
   Renders a list of sources as small citation links.
   Usage: {% include cites.html sources=item.sources %}
   Each source: { label: "BCM", url: "https://…", title: "Optional tooltip" }
+  Optional `zh: { label: … }` translates a generic label (e.g. "Talk") on the Chinese pages.
 {%- endcomment -%}
+{%- include lang.html -%}
 {%- if include.sources and include.sources.size > 0 -%}
 <span class="cites">
   {%- for source in include.sources -%}
-  <a class="cite" href="{{ source.url }}"{% if source.title %} title="{{ source.title | escape }}"{% endif %}>{{ source.label }}</a>
+  {%- assign label = source.label -%}
+  {%- if zh and source.zh.label -%}{%- assign label = source.zh.label -%}{%- endif -%}
+  <a class="cite" href="{{ source.url }}"{% if source.title %} title="{{ source.title | escape }}"{% endif %}>{{ label }}</a>
   {%- endfor -%}
 </span>
 {%- endif -%}

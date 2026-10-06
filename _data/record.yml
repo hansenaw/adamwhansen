@@ -1,9 +1,11 @@
 # Short facts under the intro. Add `sources` only where a link adds something;
-# one source per institution is enough.
+# one source per institution is enough. `zh:` is the Traditional Chinese version for /zh-tw/.
 
 - text: PhD, Molecular and Human Genetics, Baylor College of Medicine (2020)
+  zh: { text: 貝勒醫學院分子與人類遺傳學博士（2020） }
 
 - text: Principal investigator on NIH-funded research in rare disease and pharmacogenomics
+  zh: { text: 美國國家衛生研究院（NIH）補助之罕見疾病與藥物基因體學研究計畫主持人 }
   sources:
     - label: NHGRI
       url: https://reporter.nih.gov/project-details/10886143
@@ -13,12 +15,14 @@
       title: "NIH RePORTER: Private Pharmacogenomic Reporting"
 
 - text: Best Paper Award at ML4H 2025, for work from a Geneial team I led
+  zh: { text: 以我所帶領的 Geneial 團隊研究，獲 ML4H 2025 最佳論文獎 }
   sources:
     - label: PMLR
       url: https://proceedings.mlr.press/v297/di26a.html
       title: An Agentic Approach to Phenotype Mapping from Rare Disease Surveys
 
 - text: 2026 Young Alumnus Award, Baylor College of Medicine Graduate School of Biomedical Sciences
+  zh: { text: 貝勒醫學院生物醫學科學研究所 2026 年青年校友獎（Young Alumnus Award） }
   sources:
     - label: BCM
       url: https://give.bcm.edu/2026alumniawards-hansen/

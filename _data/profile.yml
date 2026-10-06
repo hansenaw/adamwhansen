@@ -11,6 +11,12 @@ alternate_names:
 # Shown under your name on the homepage.
 role_line: Computational geneticist · Founder and CEO of Geneial · Houston
 
+# Traditional Chinese (Taiwan), used only on the /zh-tw/ pages.
+zh:
+  name: 漢曉陽
+  role_line: 計算遺傳學家 · Geneial 創辦人暨執行長 · 休士頓
+  photo_alt: 漢曉陽（Adam W. Hansen）在座談會上發言
+
 # Portrait beside the intro. Cropped from a MedTech Malta 2025 event photo.
 #   src:    4:5, 480×600, shown on wider screens
 #   tight:  4:5, 240×300, closer crop shown on phones

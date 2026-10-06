@@ -1,6 +1,6 @@
 # Figure 2: new participants per year in the Xia-Gibbs syndrome registry.
 # Source: the registry's public dashboard (https://app.geneial.com/stats/dashboard?registry=xgs).
-# When you refresh it: update as_of, total, the latest year, and the summary sentence.
+# When you refresh it: update as_of, total, the latest year, and the summary sentence (and their zh: versions).
 #   label: true puts the value above that bar (keep it to a few bars).
 # The chart's scale tops out at 45 a year. If a year goes higher, raise ymax in _includes/fig-registry.html.
 as_of: October 2026
@@ -8,6 +8,9 @@ total: 259
 partial_year: 2026
 dashboard: https://app.geneial.com/stats/dashboard?registry=xgs
 summary: Roughly 11 to 22 people joined each year through 2021, then 33 to 42 a year from 2022 on.
+zh:
+  as_of: 2026 年 10 月
+  summary: 2021 年以前每年約 11 至 22 人加入，2022 年起每年 33 至 42 人。
 years:
   - { year: 2016, new: 11, label: true }
   - { year: 2017, new: 14 }

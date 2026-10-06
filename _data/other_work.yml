@@ -4,22 +4,34 @@
   kind: US Patent 12,417,301 B2
   year: 2025
   role: Co-inventor; assigned to Geneial
+  zh:
+    kind: 美國專利 12,417,301 B2
+    role: 共同發明人；專利權屬 Geneial
   url: https://patents.google.com/patent/US12417301B2/en
 
 - title: GenOMA, the Geneial Ontology Mapping Agent
   kind: Open-source code
   year: 2025
   role: Code for the ML4H 2025 paper
+  zh:
+    kind: 開源程式碼
+    role: ML4H 2025 論文的程式碼
   url: https://github.com/geneialco/GenOMA-Geneial-Ontology-Mapping-Agent
 
 - title: "Critical bottlenecks in rare disease research and care: a community perspective"
   kind: White paper (Zenodo)
   year: 2025
   role: Co-author
+  zh:
+    kind: 白皮書（Zenodo）
+    role: 共同作者
   url: https://zenodo.org/records/14907384
 
 - title: HARLEE analysis
   kind: Open-source code
   year: 2019
   role: Code for the AJHG 2019 genocentric analysis
+  zh:
+    kind: 開源程式碼
+    role: AJHG 2019 以基因為核心之分析的程式碼
   url: https://github.com/BCM-HGSC/HARLEE_analysis

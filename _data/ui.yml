@@ -1,0 +1,58 @@
+# Fixed interface text: section headings, links, and labels, in English (en) and
+# Traditional Chinese for Taiwan (zh). The words themselves live in _copy/ and the other data files.
+
+en:
+  skip: Skip to content
+  nav_label: Site
+  background: Background, with sources
+  now: What I’m working on
+  work: From gene discovery to Geneial
+  views: What I think
+  publications: Selected publications
+  publications_more: All papers, abstracts, and grants
+  recognition: Recognition and service
+  coverage: Coverage
+  speaking: Speaking
+  talks_selected: Selected talks and panels
+  talks_more: All talks and panels
+  outside: Outside work
+  contact: Contact
+  research_intro: Papers, abstracts, talks, and funded projects, each linked to its source. For citation counts and anything I’ve missed, see
+  papers: Papers
+  abstracts: Selected conference abstracts
+  talks: Talks and panels
+  grants: NIH-funded projects
+  other: Patents, reports, and code
+  updated: Updated
+  month_format: "%B %Y"
+
+zh:
+  skip: 跳至主要內容
+  nav_label: 網站導覽
+  background: 背景與資料來源
+  now: 我目前在做的事
+  work: 從基因發現到 Geneial
+  views: 我的觀點
+  publications: 精選論文
+  publications_more: 所有論文、研討會摘要與研究計畫
+  recognition: 獎項與服務
+  coverage: 媒體報導
+  speaking: 演講
+  talks_selected: 精選演講與座談
+  talks_more: 所有演講與座談
+  outside: 工作之外
+  contact: 聯絡方式
+  research_intro: 論文、研討會摘要、演講與獲補助的研究計畫，每一項都附上原始來源連結。引用次數與未列出的項目，請見
+  papers: 論文
+  abstracts: 精選研討會摘要
+  talks: 演講與座談
+  grants: NIH 補助研究計畫
+  other: 專利、報告與程式碼
+  updated: 更新於
+  month_format: "%Y 年 %-m 月"
+  # Roles that repeat across lists, translated once.
+  terms:
+    Senior author: 資深作者
+    First author: 第一作者
+    Principal investigator: 計畫主持人
+    Reviewers’ Choice: Reviewers’ Choice（審查委員精選）
