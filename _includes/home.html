@@ -27,7 +27,7 @@
 
   <ul class="actions">
     {%- for link in profile.hero_links %}
-    <li><a href="{{ link.url | relative_url }}">{{ link.label }}</a></li>
+    <li><a href="{{ link.url | relative_url }}"{% if link.url contains ".pdf" and zh %} hreflang="en"{% endif %}>{% if zh and link.zh.label %}{{ link.zh.label }}{% else %}{{ link.label }}{% endif %}</a></li>
     {%- endfor %}
   </ul>
 

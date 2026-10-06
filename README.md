@@ -11,7 +11,8 @@ Everything that changes lives in `_data/` (lists, in YAML) and `_copy/` (prose, 
 | To change… | Edit |
 | --- | --- |
 | Name, title line, photo, profile links | `_data/profile.yml` |
-| The four facts under the intro | `_data/record.yml` |
+| The CV (linked under the intro and in the footer): replace with the public version, no phone or email | `cv.pdf` |
+| The short facts under the intro (degrees, funding, awards) | `_data/record.yml` |
 | Intro paragraph | `_copy/intro.md` |
 | "What I'm working on" | `_copy/now.md` |
 | "From gene discovery to Geneial" text | `_copy/through-line.md` |

@@ -27,7 +27,7 @@ photo:
   square: /assets/img/adam-hansen-square.jpg
   alt: Adam W. Hansen speaking on a panel
 
-# The row of links under the intro.
+# The row of links under the intro. The CV is cv.pdf at the site root (the public version, without phone or email).
 hero_links:
   - label: Geneial
     url: https://geneial.com
@@ -35,6 +35,9 @@ hero_links:
     url: https://scholar.google.com/citations?user=JV0hRFMAAAAJ
   - label: LinkedIn
     url: https://www.linkedin.com/in/awhansen
+  - label: CV (PDF)
+    url: /cv.pdf
+    zh: { label: 履歷（英文 PDF） }
 
 # Footer and search-engine profile links.
 #   same_as: true      → tells search engines this profile is you
@@ -53,6 +56,9 @@ links:
   - label: LinkedIn
     url: https://www.linkedin.com/in/awhansen
     same_as: true
+  - label: CV (PDF)
+    url: /cv.pdf
+    zh: { label: 履歷（英文 PDF） }
 
 # Search-engine profile (schema.org). Only facts that are public and current.
 schema:

@@ -4,7 +4,7 @@
   <div class="wrap">
     <ul class="footer-links">
       {%- for link in profile.links %}
-      <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+      <li><a href="{{ link.url | relative_url }}">{% if zh and link.zh.label %}{{ link.zh.label }}{% else %}{{ link.label }}{% endif %}</a></li>
       {%- endfor %}
     </ul>
     <p>© {{ site.time | date: "%Y" }} {% if zh %}{{ profile.zh.name }} {% endif %}{{ profile.name }} · {{ ui.updated }} {{ site.time | date: ui.month_format }}</p>
