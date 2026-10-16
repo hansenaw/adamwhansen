@@ -12,12 +12,12 @@
       title: Baylor College of Medicine 2026 Alumni Awards profile
 
 - year: 2025
-  title: Best Paper Award, ML4H 2025
+  title: Best Paper Award, Machine Learning for Health (ML4H)
   detail: >-
     For “An Agentic Approach to Phenotype Mapping from Rare Disease Surveys,” from a Geneial team I
     led; Jipeng Di and Julie Vaughn are co-first authors
   zh:
-    title: ML4H 2025 最佳論文獎
+    title: Machine Learning for Health（ML4H）最佳論文獎
     detail: 論文〈An Agentic Approach to Phenotype Mapping from Rare Disease Surveys〉出自我所帶領的 Geneial 團隊；Jipeng Di 與 Julie Vaughn 為共同第一作者
   sources:
     - label: PMLR
